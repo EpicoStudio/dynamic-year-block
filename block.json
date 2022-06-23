@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "ano/current-year",
+	"title": "Current Year",
+	"category": "theme",
+	"description": "Add the currenty year.",
+	"textdomain": "ano-current-year",
+	"attributes": {
+		"textAlign": {
+			"type": "string"
+		},
+		"format": {
+			"type": "string"
+		}
+	},
+	"usesContext": [
+        "backgroundColor",
+        "foregroundColor"
+	],
+	"supports": {
+		"html": false,
+		"color": {
+			"gradients": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true,
+				"lineHeight": true,
+				"fontAppearance": true,
+				"letterSpacing": true,
+				"textTransform": true
+			}
+		}
+	}
+}
