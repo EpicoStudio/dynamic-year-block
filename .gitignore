@@ -1,3 +1,6 @@
+# ignore DS_store files
+.DS_Store
+
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
 
