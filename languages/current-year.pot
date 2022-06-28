@@ -49,7 +49,7 @@ msgstr ""
 
 #. Plugin URI of the plugin/theme
 #. Author URI of the plugin/theme
-msgid "https://www.uberfacil.com/epico"
+msgid "https://www.uberfacil.com"
 msgstr ""
 
 #. Description of the plugin/theme

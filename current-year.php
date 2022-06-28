@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       The Current Year
- * Plugin URI:        https://www.uberfacil.com/epico
+ * Plugin URI:        https://www.uberfacil.com
  * Description:       A simple block that always displays the current year.
- * Version:           1.0.0
+ * Version:           0.1.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
- * Author URI:        https://www.uberfacil.com/epico
+ * Author URI:        https://www.uberfacil.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       current-year
