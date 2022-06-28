@@ -7,7 +7,7 @@
 import { useBlockProps } from '@wordpress/block-editor';
 
 /**
- * The save returns `null` as this is a dynamic block.
+ * The save returns `null`, as this is a dynamic block.
  *
  * @see https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/creating-dynamic-blocks/
  *

@@ -2,9 +2,9 @@
 	"name": "current-year",
 	"version": "1.0.0",
 	"description": "Add the currenty year.",
-	"author": "Márcio Duarte",
+	"author": "Marcio Duarte",
 	"license": "GPL-2.0-or-later",
-	"homepage": "https://www.uberfacil.com",
+	"homepage": "https://www.epico.com",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",

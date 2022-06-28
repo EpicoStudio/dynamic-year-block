@@ -6,7 +6,7 @@ import {
 } from '@wordpress/date';
 
 /**
- * Controls and react hook with all the necessary props.
+ * Inspector Controls and react hook with all the necessary props.
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
@@ -19,7 +19,7 @@ import { PanelBody, RadioControl } from '@wordpress/components';
 import { __, sprintf } from '@wordpress/i18n';
 
 /**
- * Renders the `pagelab/current-year` block on the editor.
+ * Renders the `epico/current-year` block on the editor.
  *
  * @param {Object} props                   React props.
  * @param {Object} props.setAttributes     Callback for updating block attributes.
@@ -36,14 +36,15 @@ export default function Edit( {
 	// Define the two-digit year for the help text.
 	const year = wp.date.dateI18n( 'y' );
 
+	// Block properties.
 	const blockProps = useBlockProps();
 
 	// Define the inspector controls.
 	const inspectorControls = (
-
 		<InspectorControls>
 			<PanelBody title={ __( 'Settings' ) }>
 				<RadioControl
+						className={ 'epico_current-year' }
 						label={ __( 'Year format:' ) }
 						selected={ format }
 						options={ [
@@ -68,11 +69,23 @@ export default function Edit( {
 	// Get the current year.
 	let currentYear = wp.date.dateI18n( format );
 
-	// Return the controls and the block markup.
+	// Add a small margin to the help text.
+	let editorInlineStyle = `
+		.epico_current-year > [id*="help"] {
+			margin-top: 15px !important;
+		}
+	`;
+
+	// Return the controls and the block markup for the editor.
 	return (
 		<>
 			{ inspectorControls }
-			<div { ...blockProps }><p>{ currentYear }</p></div>
+			<style>{ editorInlineStyle }</style>
+			<div { ...blockProps }>
+				<p className={ "current-year_" + currentYear }>
+					{ currentYear }
+				</p>
+			</div>
 		</>
 	);
 }

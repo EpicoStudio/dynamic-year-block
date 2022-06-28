@@ -1,16 +1,18 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "pagelab/current-year",
+  "name": "epico/current-year",
   "version": "1.0.0",
   "title": "Current Year",
   "category": "text",
-  "icon": "smile",
+  "icon": "calendar",
   "keywords": [
     "year",
-    "current"
+    "current",
+    "footer",
+    "copyright"
   ],
-  "description": "A simple block that displays the current year.",
+  "description": "A simple block that always displays the current year.",
   "textdomain": "current-year",
   "attributes": {
     "format": {
@@ -48,18 +50,14 @@
       "__experimentalFontFamily": true,
       "__experimentalFontWeight": true,
       "__experimentalFontStyle": true,
-      "__experimentalTextTransform": true,
       "__experimentalLetterSpacing": true,
       "__experimentalDefaultControls": {
         "fontSize": true,
         "lineHeight": true,
         "fontAppearance": true,
-        "letterSpacing": true,
-        "textTransform": true
+        "letterSpacing": true
       }
     }
   },
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+  "editorScript": "file:./index.js"
 }

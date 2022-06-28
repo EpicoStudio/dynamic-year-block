@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Current Year\n"
-"POT-Creation-Date: 2022-06-23 20:03-0300\n"
+"POT-Creation-Date: 2022-06-28 16:28-0300\n"
 "PO-Revision-Date: 2022-06-23 20:01-0300\n"
 "Last-Translator: Márcio Duarte <contato@uberfacil."
 "com>\n"
@@ -24,6 +24,24 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: build\n"
+
+#: src/edit.js:45
+msgid "Settings"
+msgstr ""
+
+#: src/edit.js:48
+msgid "Year format:"
+msgstr ""
+
+#: src/edit.js:51
+msgid "Four digits"
+msgstr ""
+
+#: src/edit.js:52
+msgid "Two digits"
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "The Current Year"
@@ -31,11 +49,12 @@ msgstr ""
 
 #. Plugin URI of the plugin/theme
 #. Author URI of the plugin/theme
-msgid "https://www.uberfacil.com"
+msgid "https://www.uberfacil.com/epico"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "A simple block that displays the current year."
+msgid ""
+"A simple block that always displays the current year."
 msgstr ""
 
 #. Author of the plugin/theme

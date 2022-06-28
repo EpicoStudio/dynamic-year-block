@@ -1,19 +1,19 @@
 <?php
 /**
  * Plugin Name:       The Current Year
- * Plugin URI:        https://www.uberfacil.com
- * Description:       A simple block that displays the current year.
+ * Plugin URI:        https://www.uberfacil.com/epico
+ * Description:       A simple block that always displays the current year.
  * Version:           1.0.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
- * Author URI:        https://www.uberfacil.com
+ * Author URI:        https://www.uberfacil.com/epico
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       current-year
  * Domain Path:       current-year
  *
- * @package           pagelab
+ * @package           epico
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -27,8 +27,8 @@ defined( 'ABSPATH' ) || exit;
  * @param  WP_Block $block      Block instance.
  * @return string   Returns the filtered current year wrapped in a <p> tag.
  */
-if ( ! function_exists( 'pagelab_render_block_current_year' ) ) {
-	function pagelab_render_block_current_year( $attributes, $content, $block ) {
+if ( ! function_exists( 'epico_render_block_current_year' ) ) {
+	function epico_render_block_current_year( $attributes, $content, $block ) {
 
 		// Block classes and attributes.
 		$align_class_name   = empty( $attributes['textAlign'] ) ? '' : "has-text-align-{$attributes['textAlign']}";
@@ -41,7 +41,7 @@ if ( ! function_exists( 'pagelab_render_block_current_year' ) ) {
 
 		// Return the block markup.
 		return sprintf(
-			'<div %1$s><p class="year-%2$s">%2$s</div>',
+			'<div %1$s><p class="current-year_%2$s">%2$s</div>',
 			$wrapper_attributes,
 			$current_year
 		);
@@ -49,13 +49,13 @@ if ( ! function_exists( 'pagelab_render_block_current_year' ) ) {
 }
 
 /**
- * Registers the `pagelab/current-year` block on the server.
+ * Registers the `epico/current-year` block on the server.
  *
  * @link   https://developer.wordpress.org/reference/functions/register_block_type/
  * @return void
  */
-if ( ! function_exists( 'pagelab_register_block_current_year' ) ) {
-	function pagelab_register_block_current_year() {
+if ( ! function_exists( 'epico_register_block_current_year' ) ) {
+	function epico_register_block_current_year() {
 	    if ( ! function_exists( 'register_block_type' ) ) {
 	        // The block editor is not available.
 	        return;
@@ -65,12 +65,12 @@ if ( ! function_exists( 'pagelab_register_block_current_year' ) ) {
 	    register_block_type(
 	    	__DIR__ . '/build',
 	    	array(
-	        	'render_callback' => 'pagelab_render_block_current_year',
+	        	'render_callback' => 'epico_render_block_current_year',
 	    	)
 	    );
 
-	    wp_set_script_translations( 'pagelab_current-year-editor-script-js', 'current-year' );
+	    wp_set_script_translations( 'epico-current-year-editor-script-js', 'current-year' );
 	}
 }
 
-add_action( 'init', 'pagelab_register_block_current_year' );
+add_action( 'init', 'epico_register_block_current_year' );
