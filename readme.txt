@@ -7,6 +7,7 @@ Requires PHP:      7.0
 Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Donate link: https://www.paypal.com/donate/?business=38CHEXT22X57J&no_recurring=0&item_name=Thanks+for+donating%21&currency_code=BRL
 
 A simple block that always displays the current year.
 
