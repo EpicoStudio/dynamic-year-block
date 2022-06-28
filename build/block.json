@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "pagelab/current-year",
+  "version": "1.0.0",
+  "title": "Current Year",
+  "category": "text",
+  "icon": "smile",
+  "keywords": [
+    "year",
+    "current"
+  ],
+  "description": "A simple block that displays the current year.",
+  "textdomain": "current-year",
+  "attributes": {
+    "format": {
+      "type": "string",
+      "default": "Y"
+    }
+  },
+  "usesContext": [
+    "backgroundColor",
+    "foregroundColor"
+  ],
+  "supports": {
+    "align": true,
+    "html": false,
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "gradients": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true,
+        "lineHeight": true,
+        "fontAppearance": true,
+        "letterSpacing": true,
+        "textTransform": true
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

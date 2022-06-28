@@ -1,17 +1,18 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "ano/current-year",
+	"name": "pagelab/current-year",
+	"version": "1.0.0",
 	"title": "Current Year",
-	"category": "theme",
-	"description": "Add the currenty year.",
-	"textdomain": "ano-current-year",
+	"category": "text",
+	"icon": "smile",
+	"keywords": [ "year", "current" ],
+	"description": "A simple block that displays the current year.",
+	"textdomain": "current-year",
 	"attributes": {
-		"textAlign": {
-			"type": "string"
-		},
 		"format": {
-			"type": "string"
+			"type": "string",
+			"default": "Y"
 		}
 	},
 	"usesContext": [
@@ -19,7 +20,18 @@
         "foregroundColor"
 	],
 	"supports": {
+		"align": true,
 		"html": false,
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		},
 		"color": {
 			"gradients": true,
 			"__experimentalDefaultControls": {
@@ -43,5 +55,8 @@
 				"textTransform": true
 			}
 		}
-	}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
 }
