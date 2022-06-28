@@ -2,35 +2,37 @@
 Contributors:      Márcio Duarte
 Tags:              block
 Tested up to:      6.0
+Requires at least: 5.9
+Requires PHP:      7.0
 Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Add the currenty year.
+A simple block that always displays the current year.
 
 == Description ==
 
-A simple block that always displays the current year.
-
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/current-year` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-
+1. Upload the `current-year` folder to your `/wp-content/plugins/` directory or alternatively upload the current-year.zip file via the plugin page of WordPress by clicking “Add New” and selecting the zip from your local computer.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Search for the “Current year” block in any block inserter within the block editor.
 
 == Frequently Asked Questions ==
+= Where can I send feedback or support questions? =
+Please reach out via the official [plugin support forum](https://wordpress.org/support/plugin/current-year).
 
-= A question that someone might have =
+= Is there a Github repo for this plugin? =
 
-An answer to that question.
+Yes, there is, [visit the GitHub repo](https://github.com/Uberfacil/current-year).
 
-= What about foo bar? =
+= Is this a static or a dynamic block? =
 
-Answer to foo bar dilemma.
+This is a dynamic block, as it is recommended to set the current year dinamically, based on your server time in conjunction with your specific timezone.
+
+= Does the plugin use the client (via Javascript) or the server time (via PHP) to update the year? =
+
+The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time with using timezone specified in the “Settings → General → Timezone” on your WordPress dashboard, so it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
 
 == Screenshots ==
 
@@ -42,11 +44,5 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
-= 1.0.0 =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+= 0.1.0 =
+* Initial release
