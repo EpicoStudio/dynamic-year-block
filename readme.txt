@@ -1,4 +1,4 @@
-=== Current Year ===
+=== Current Year Block ===
 Contributors:      Márcio Duarte
 Tags:              gutenberg, block, blocks, year, current, copyright, footer
 Tested up to:      6.0
@@ -35,16 +35,10 @@ This is a dynamic block, as it is recommended to set the current year dinamicall
 
 The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time with using timezone specified in the “Settings → General → Timezone” on your WordPress dashboard, so it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
 
-= Who's Rich Tabor? =
-As a WordPress entrepreneur, designer and developer all wrapped up in one, [@richard_tabor](http://twitter.com/richard_tabor) is recognized as one of the top leaders in this post-Gutenberg era of WordPress. His design chops have topped the 2018 Automattic Design Awards and led him to found CoBlocks – a top-notch set of page builder blocks and tools for Gutenberg, ThemeBeans – a premier WordPress theme shop and [Iceberg](https://useiceberg.com/?utm_source=wp-org&utm_medium=post-modified-time-block&utm_campaign=readme-faq) – a markdown editor for Gutenberg.
-
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Adding the block in the footer template.
+2. Block options.
 
 == Changelog ==
 
