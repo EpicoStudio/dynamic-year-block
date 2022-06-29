@@ -1,21 +1,21 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "mduarte/current-year-block",
+  "name": "mduarte/dynamic-year-block",
   "version": "0.1.0",
-  "title": "Current Year",
+  "title": "Dynamic Year",
   "category": "text",
   "icon": "calendar",
   "keywords": [
     "year",
-    "current",
+    "dynamic",
     "block",
     "blocks",
     "footer",
     "copyright"
   ],
-  "description": "A simple block that displays the current year.",
-  "textdomain": "current-year-block",
+  "description": "A block that always displays the current year.",
+  "textdomain": "dynamic-year-block",
   "attributes": {
     "format": {
       "type": "string",

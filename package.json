@@ -1,10 +1,10 @@
 {
-	"name": "current-year-block",
+	"name": "dynamic-year-block",
 	"version": "0.1.0",
 	"description": "Add the currenty year.",
 	"author": "Marcio Duarte",
 	"license": "GPL-2.0-or-later",
-	"homepage": "https://www.uberfacil.com",
+	"homepage": "https://mduarte.studio",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",

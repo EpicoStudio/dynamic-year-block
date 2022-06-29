@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       Current Year Block
- * Plugin URI:        https://www.uberfacil.com
- * Description:       A simple block that always displays the current year.
+ * Plugin Name:       Dynamic Year Block
+ * Plugin URI:        https://github.com/Uberfacil/dynamic-year-block
+ * Description:       A block that always displays the current year.
  * Version:           0.1.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
@@ -10,8 +10,8 @@
  * Author URI:        https://www.uberfacil.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       current-year-block
- * Domain Path:       current-year-block
+ * Text Domain:       dynamic-year-block
+ * Domain Path:       dynamic-year-block
  *
  * @package           mduarte
  */
@@ -19,7 +19,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Renders the `current-year-block` on the server.
+ * Renders the `dynamic-year-block` on the server.
  *
  * @link   https://developer.wordpress.org/reference/functions/current_datetime/
  * @param  array    $attributes Block attributes.
@@ -27,8 +27,8 @@ defined( 'ABSPATH' ) || exit;
  * @param  WP_Block $block      Block instance.
  * @return string   Returns the filtered current year wrapped in a <p> tag.
  */
-if ( ! function_exists( 'mduarte_render_block_current_year_block' ) ) {
-	function mduarte_render_block_current_year_block( $attributes, $content, $block ) {
+if ( ! function_exists( 'mduarte_render_block_dynamic_year_block' ) ) {
+	function mduarte_render_block_dynamic_year_block( $attributes, $content, $block ) {
 
 		// Block classes and attributes.
 		$align_class_name   = empty( $attributes['textAlign'] ) ? '' : "has-text-align-{$attributes['textAlign']}";
@@ -37,25 +37,25 @@ if ( ! function_exists( 'mduarte_render_block_current_year_block' ) ) {
 		// Get the current year.
 	    $current_date = current_datetime();
 		$format       = empty( $attributes['format'] ) ? 'Y' : $attributes['format'];
-		$current_year = $current_date->format($format);
+		$dynamic_year = $current_date->format($format);
 
-		// Return the block markup.
+		// Return the block markup with the current year.
 		return sprintf(
-			'<div %1$s><p class="current-year_%2$s">%2$s</div>',
+			'<div %1$s><p class="dynamic-year_%2$s">%2$s</div>',
 			$wrapper_attributes,
-			$current_year
+			$dynamic_year
 		);
 	}
 }
 
 /**
- * Registers the `mduarte/current-year-block` block on the server.
+ * Registers the `mduarte/dynamic-year-block` block on the server.
  *
  * @link   https://developer.wordpress.org/reference/functions/register_block_type/
  * @return void
  */
-if ( ! function_exists( 'mduarte_register_block_current_year_block' ) ) {
-	function mduarte_register_block_current_year_block() {
+if ( ! function_exists( 'mduarte_register_block_dynamic_year_block' ) ) {
+	function mduarte_register_block_dynamic_year_block() {
 	    if ( ! function_exists( 'register_block_type' ) ) {
 	        // The block editor is not available.
 	        return;
@@ -65,12 +65,12 @@ if ( ! function_exists( 'mduarte_register_block_current_year_block' ) ) {
 	    register_block_type(
 	    	__DIR__ . '/build',
 	    	array(
-	        	'render_callback' => 'mduarte_render_block_current_year_block',
+	        	'render_callback' => 'mduarte_render_block_dynamic_year_block',
 	    	)
 	    );
 
-	    wp_set_script_translations( 'mduarte-current-year-block-editor-script-js', 'current-year-block' );
+	    wp_set_script_translations( 'mduarte-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
 	}
 }
 
-add_action( 'init', 'mduarte_register_block_current_year_block' );
+add_action( 'init', 'mduarte_register_block_dynamic_year_block' );

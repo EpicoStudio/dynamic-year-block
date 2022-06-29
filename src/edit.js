@@ -19,7 +19,7 @@ import { PanelBody, RadioControl } from '@wordpress/components';
 import { __, sprintf } from '@wordpress/i18n';
 
 /**
- * Renders the `mduarte/current-year-block` block on the editor.
+ * Renders the `mduarte/dynamic-year-block` block on the editor.
  *
  * @param {Object} props                   React props.
  * @param {Object} props.setAttributes     Callback for updating block attributes.
@@ -44,7 +44,7 @@ export default function Edit( {
 		<InspectorControls>
 			<PanelBody title={ __( 'Settings' ) }>
 				<RadioControl
-						className={ 'mduarte_current-year' }
+						className={ 'dynamic-year-block' }
 						label={ __( 'Year format:' ) }
 						selected={ format }
 						options={ [
@@ -71,7 +71,7 @@ export default function Edit( {
 
 	// Add a small margin to the help text.
 	let editorInlineStyle = `
-		.mduarte_current-year > [id*="help"] {
+		.dynamic-year-block > [id*="help"] {
 			margin-top: 15px !important;
 		}
 	`;
@@ -82,7 +82,7 @@ export default function Edit( {
 			{ inspectorControls }
 			<style>{ editorInlineStyle }</style>
 			<div { ...blockProps }>
-				<p className={ "current-year_" + currentYear }>
+				<p className={ "dynamic-year_" + currentYear }>
 					{ currentYear }
 				</p>
 			</div>
