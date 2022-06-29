@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       Dynamic Year Block
- * Plugin URI:        https://github.com/Uberfacil/dynamic-year-block
+ * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year.
  * Version:           0.1.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
- * Author URI:        https://www.uberfacil.com
+ * Author URI:        http://epico.studio
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       dynamic-year-block

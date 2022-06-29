@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic Year Block\n"
-"POT-Creation-Date: 2022-06-29 15:29-0300\n"
+"POT-Creation-Date: 2022-06-29 15:52-0300\n"
 "PO-Revision-Date: 2022-06-29 14:02-0300\n"
 "Last-Translator: Márcio Duarte <contato@uberfacil."
 "com>\n"
@@ -47,7 +47,8 @@ msgid "Dynamic Year Block"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/Uberfacil/dynamic-year-block"
+msgid ""
+"https://github.com/EpicoStudio/dynamic-year-block"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -59,5 +60,5 @@ msgid "Márcio Duarte"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.uberfacil.com"
+msgid "http://epico.studio"
 msgstr ""
