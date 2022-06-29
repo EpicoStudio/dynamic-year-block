@@ -19,7 +19,7 @@ import { PanelBody, RadioControl } from '@wordpress/components';
 import { __, sprintf } from '@wordpress/i18n';
 
 /**
- * Renders the `mduarte/dynamic-year-block` block on the editor.
+ * Renders the `epico/dynamic-year-block` block on the editor.
  *
  * @param {Object} props                   React props.
  * @param {Object} props.setAttributes     Callback for updating block attributes.

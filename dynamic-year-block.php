@@ -13,7 +13,7 @@
  * Text Domain:       dynamic-year-block
  * Domain Path:       dynamic-year-block
  *
- * @package           mduarte
+ * @package           epico
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -27,8 +27,8 @@ defined( 'ABSPATH' ) || exit;
  * @param  WP_Block $block      Block instance.
  * @return string   Returns the filtered current year wrapped in a <p> tag.
  */
-if ( ! function_exists( 'mduarte_render_block_dynamic_year_block' ) ) {
-	function mduarte_render_block_dynamic_year_block( $attributes, $content, $block ) {
+if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
+	function epico_render_block_dynamic_year_block( $attributes, $content, $block ) {
 
 		// Block classes and attributes.
 		$align_class_name   = empty( $attributes['textAlign'] ) ? '' : "has-text-align-{$attributes['textAlign']}";
@@ -49,13 +49,13 @@ if ( ! function_exists( 'mduarte_render_block_dynamic_year_block' ) ) {
 }
 
 /**
- * Registers the `mduarte/dynamic-year-block` block on the server.
+ * Registers the `epico/dynamic-year-block` block on the server.
  *
  * @link   https://developer.wordpress.org/reference/functions/register_block_type/
  * @return void
  */
-if ( ! function_exists( 'mduarte_register_block_dynamic_year_block' ) ) {
-	function mduarte_register_block_dynamic_year_block() {
+if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
+	function epico_register_block_dynamic_year_block() {
 	    if ( ! function_exists( 'register_block_type' ) ) {
 	        // The block editor is not available.
 	        return;
@@ -65,12 +65,13 @@ if ( ! function_exists( 'mduarte_register_block_dynamic_year_block' ) ) {
 	    register_block_type(
 	    	__DIR__ . '/build',
 	    	array(
-	        	'render_callback' => 'mduarte_render_block_dynamic_year_block',
+	        	'render_callback' => 'epico_render_block_dynamic_year_block',
 	    	)
 	    );
 
-	    wp_set_script_translations( 'mduarte-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
+	    // Load available translations.
+	    wp_set_script_translations( 'epico-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
 	}
 }
 
-add_action( 'init', 'mduarte_register_block_dynamic_year_block' );
+add_action( 'init', 'epico_register_block_dynamic_year_block' );

@@ -38,7 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Renders the `mduarte/dynamic-year-block` block on the editor.
+ * Renders the `epico/dynamic-year-block` block on the editor.
  *
  * @param {Object} props                   React props.
  * @param {Object} props.setAttributes     Callback for updating block attributes.
@@ -163,7 +163,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"mduarte/dynamic-year-block","version":"0.1.0","title":"Dynamic Year","category":"text","icon":"calendar","keywords":["year","dynamic","block","blocks","footer","copyright"],"description":"A block that always displays the current year.","textdomain":"dynamic-year-block","attributes":{"format":{"type":"string","default":"Y"}},"usesContext":["backgroundColor","foregroundColor"],"supports":{"align":true,"html":false,"__experimentalBorder":{"color":true,"radius":true,"style":true,"width":true},"spacing":{"padding":true,"margin":true},"color":{"gradients":true,"__experimentalDefaultControls":{"background":true,"text":true}},"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true,"lineHeight":true,"fontAppearance":true,"letterSpacing":true}}},"editorScript":"file:./index.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"epico/dynamic-year-block","version":"0.1.0","title":"Dynamic Year","category":"text","icon":"calendar","keywords":["year","dynamic","block","blocks","footer","copyright"],"description":"A block that always displays the current year.","textdomain":"dynamic-year-block","attributes":{"format":{"type":"string","default":"Y"}},"usesContext":["backgroundColor","foregroundColor"],"supports":{"align":true,"html":false,"__experimentalBorder":{"color":true,"radius":true,"style":true,"width":true},"spacing":{"padding":true,"margin":true},"color":{"gradients":true,"__experimentalDefaultControls":{"background":true,"text":true}},"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true,"lineHeight":true,"fontAppearance":true,"letterSpacing":true}}},"editorScript":"file:./index.js"}');
 
 /***/ })
 
