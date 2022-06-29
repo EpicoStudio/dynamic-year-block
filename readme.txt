@@ -1,6 +1,6 @@
 === Dynamic Year Block ===
-Contributors:      Márcio Duarte
-Tags:              gutenberg, block, blocks, year, current, copyright, footer
+Contributors:      pagelab, epicostudio
+Tags:              gutenberg, block, blocks, year, dynamic, copyright, footer
 Tested up to:      6.0
 Requires at least: 5.9
 Requires PHP:      7.0
@@ -33,14 +33,14 @@ Yes, there is, [visit the GitHub repo](https://github.com/Uberfacil/dynamic-year
 
 This is a dynamic block, as it is recommended to set the current year dinamically, based on your server time in conjunction with your specific timezone.
 
-= Does the plugin use the client (via Javascript) or the server time (via PHP) to update the year? =
+= Does the plugin use the client time (via Javascript) or the server time (via PHP) to update the year? =
 
-The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time with using timezone specified in the “Settings → General → Timezone” on your WordPress dashboard, so it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
+The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time, using the timezone specified in the “Settings → General → Timezone” on your WordPress dashboard. So it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
 
 == Screenshots ==
 
-1. Adding the block in the footer template.
-2. Block options.
+1. Adding the block in the footer template, using the site editor.
+2. Block options: you can choose between a two-digit and four-digit year.
 
 == Changelog ==
 
