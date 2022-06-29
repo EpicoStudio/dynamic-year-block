@@ -19,7 +19,7 @@ import { PanelBody, RadioControl } from '@wordpress/components';
 import { __, sprintf } from '@wordpress/i18n';
 
 /**
- * Renders the `epico/current-year` block on the editor.
+ * Renders the `mduarte/current-year-block` block on the editor.
  *
  * @param {Object} props                   React props.
  * @param {Object} props.setAttributes     Callback for updating block attributes.
@@ -44,7 +44,7 @@ export default function Edit( {
 		<InspectorControls>
 			<PanelBody title={ __( 'Settings' ) }>
 				<RadioControl
-						className={ 'epico_current-year' }
+						className={ 'mduarte_current-year' }
 						label={ __( 'Year format:' ) }
 						selected={ format }
 						options={ [
@@ -71,7 +71,7 @@ export default function Edit( {
 
 	// Add a small margin to the help text.
 	let editorInlineStyle = `
-		.epico_current-year > [id*="help"] {
+		.mduarte_current-year > [id*="help"] {
 			margin-top: 15px !important;
 		}
 	`;

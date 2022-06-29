@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       The Current Year
+ * Plugin Name:       Current Year Block
  * Plugin URI:        https://www.uberfacil.com
  * Description:       A simple block that always displays the current year.
  * Version:           0.1.0
@@ -10,16 +10,16 @@
  * Author URI:        https://www.uberfacil.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       current-year
- * Domain Path:       current-year
+ * Text Domain:       current-year-block
+ * Domain Path:       current-year-block
  *
- * @package           epico
+ * @package           mduarte
  */
 
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Renders the `current-year` block on the server.
+ * Renders the `current-year-block` on the server.
  *
  * @link   https://developer.wordpress.org/reference/functions/current_datetime/
  * @param  array    $attributes Block attributes.
@@ -27,8 +27,8 @@ defined( 'ABSPATH' ) || exit;
  * @param  WP_Block $block      Block instance.
  * @return string   Returns the filtered current year wrapped in a <p> tag.
  */
-if ( ! function_exists( 'epico_render_block_current_year' ) ) {
-	function epico_render_block_current_year( $attributes, $content, $block ) {
+if ( ! function_exists( 'mduarte_render_block_current_year_block' ) ) {
+	function mduarte_render_block_current_year_block( $attributes, $content, $block ) {
 
 		// Block classes and attributes.
 		$align_class_name   = empty( $attributes['textAlign'] ) ? '' : "has-text-align-{$attributes['textAlign']}";
@@ -49,13 +49,13 @@ if ( ! function_exists( 'epico_render_block_current_year' ) ) {
 }
 
 /**
- * Registers the `epico/current-year` block on the server.
+ * Registers the `mduarte/current-year-block` block on the server.
  *
  * @link   https://developer.wordpress.org/reference/functions/register_block_type/
  * @return void
  */
-if ( ! function_exists( 'epico_register_block_current_year' ) ) {
-	function epico_register_block_current_year() {
+if ( ! function_exists( 'mduarte_register_block_current_year_block' ) ) {
+	function mduarte_register_block_current_year_block() {
 	    if ( ! function_exists( 'register_block_type' ) ) {
 	        // The block editor is not available.
 	        return;
@@ -65,12 +65,12 @@ if ( ! function_exists( 'epico_register_block_current_year' ) ) {
 	    register_block_type(
 	    	__DIR__ . '/build',
 	    	array(
-	        	'render_callback' => 'epico_render_block_current_year',
+	        	'render_callback' => 'mduarte_render_block_current_year_block',
 	    	)
 	    );
 
-	    wp_set_script_translations( 'epico-current-year-editor-script-js', 'current-year' );
+	    wp_set_script_translations( 'mduarte-current-year-block-editor-script-js', 'current-year-block' );
 	}
 }
 
-add_action( 'init', 'epico_register_block_current_year' );
+add_action( 'init', 'mduarte_register_block_current_year_block' );

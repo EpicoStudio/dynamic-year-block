@@ -1,13 +1,13 @@
 === Current Year ===
 Contributors:      Márcio Duarte
-Tags:              block
+Tags:              gutenberg, block, blocks, year, current, copyright, footer
 Tested up to:      6.0
 Requires at least: 5.9
 Requires PHP:      7.0
 Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
-Donate link: https://www.paypal.com/donate/?business=38CHEXT22X57J&no_recurring=0&item_name=Thanks+for+donating%21&currency_code=BRL
+Donate link:       https://www.paypal.com/donate/?business=38CHEXT22X57J&no_recurring=0&item_name=Thanks+for+donating%21&currency_code=BRL
 
 A simple block that always displays the current year.
 
@@ -15,17 +15,17 @@ A simple block that always displays the current year.
 
 == Installation ==
 
-1. Upload the `current-year` folder to your `/wp-content/plugins/` directory or alternatively upload the current-year.zip file via the plugin page of WordPress by clicking “Add New” and selecting the zip from your local computer.
+1. Upload the `current-year-block` folder to your `/wp-content/plugins/` directory or alternatively upload the current-year-block.zip file via the plugin page of WordPress by clicking “Add New” and selecting the zip from your local computer.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Search for the “Current year” block in any block inserter within the block editor.
 
 == Frequently Asked Questions ==
 = Where can I send feedback or support questions? =
-Please reach out via the official [plugin support forum](https://wordpress.org/support/plugin/current-year).
+Please reach out via the official [plugin support forum](https://wordpress.org/support/plugin/current-year-block).
 
 = Is there a Github repo for this plugin? =
 
-Yes, there is, [visit the GitHub repo](https://github.com/Uberfacil/current-year).
+Yes, there is, [visit the GitHub repo](https://github.com/Uberfacil/current-year-block).
 
 = Is this a static or a dynamic block? =
 
@@ -34,6 +34,9 @@ This is a dynamic block, as it is recommended to set the current year dinamicall
 = Does the plugin use the client (via Javascript) or the server time (via PHP) to update the year? =
 
 The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time with using timezone specified in the “Settings → General → Timezone” on your WordPress dashboard, so it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
+
+= Who's Rich Tabor? =
+As a WordPress entrepreneur, designer and developer all wrapped up in one, [@richard_tabor](http://twitter.com/richard_tabor) is recognized as one of the top leaders in this post-Gutenberg era of WordPress. His design chops have topped the 2018 Automattic Design Awards and led him to found CoBlocks – a top-notch set of page builder blocks and tools for Gutenberg, ThemeBeans – a premier WordPress theme shop and [Iceberg](https://useiceberg.com/?utm_source=wp-org&utm_medium=post-modified-time-block&utm_campaign=readme-faq) – a markdown editor for Gutenberg.
 
 == Screenshots ==
 

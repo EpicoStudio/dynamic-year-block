@@ -1,14 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "epico/current-year",
+	"name": "mduarte/current-year-block",
 	"version": "0.1.0",
 	"title": "Current Year",
 	"category": "text",
 	"icon": "calendar",
-	"keywords": [ "year", "current", "footer", "copyright" ],
+	"keywords": [ "year", "current", "block", "blocks", "footer", "copyright" ],
 	"description": "A simple block that displays the current year.",
-	"textdomain": "current-year",
+	"textdomain": "current-year-block",
 	"attributes": {
 		"format": {
 			"type": "string",

@@ -38,7 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Renders the `epico/current-year` block on the editor.
+ * Renders the `mduarte/current-year-block` block on the editor.
  *
  * @param {Object} props                   React props.
  * @param {Object} props.setAttributes     Callback for updating block attributes.
@@ -64,7 +64,7 @@ function Edit(_ref) {
   const inspectorControls = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Settings')
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RadioControl, {
-    className: 'epico_current-year',
+    className: 'mduarte_current-year',
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Year format:'),
     selected: format,
     options: [{
@@ -85,7 +85,7 @@ function Edit(_ref) {
   let currentYear = wp.date.dateI18n(format); // Add a small margin to the help text.
 
   let editorInlineStyle = `
-		.epico_current-year > [id*="help"] {
+		.mduarte_current-year > [id*="help"] {
 			margin-top: 15px !important;
 		}
 	`; // Return the controls and the block markup for the editor.
@@ -201,7 +201,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"epico/current-year","version":"1.0.0","title":"Current Year","category":"text","icon":"calendar","keywords":["year","current","footer","copyright"],"description":"A simple block that displays the current year.","textdomain":"current-year","attributes":{"format":{"type":"string","default":"Y"}},"usesContext":["backgroundColor","foregroundColor"],"supports":{"align":true,"html":false,"__experimentalBorder":{"color":true,"radius":true,"style":true,"width":true},"spacing":{"padding":true,"margin":true},"color":{"gradients":true,"__experimentalDefaultControls":{"background":true,"text":true}},"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true,"lineHeight":true,"fontAppearance":true,"letterSpacing":true}}},"editorScript":"file:./index.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"mduarte/current-year-block","version":"0.1.0","title":"Current Year","category":"text","icon":"calendar","keywords":["year","current","block","blocks","footer","copyright"],"description":"A simple block that displays the current year.","textdomain":"current-year-block","attributes":{"format":{"type":"string","default":"Y"}},"usesContext":["backgroundColor","foregroundColor"],"supports":{"align":true,"html":false,"__experimentalBorder":{"color":true,"radius":true,"style":true,"width":true},"spacing":{"padding":true,"margin":true},"color":{"gradients":true,"__experimentalDefaultControls":{"background":true,"text":true}},"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true,"lineHeight":true,"fontAppearance":true,"letterSpacing":true}}},"editorScript":"file:./index.js"}');
 
 /***/ })
 
