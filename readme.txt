@@ -27,7 +27,7 @@ Please reach out via the official [plugin support forum](https://wordpress.org/s
 
 = Is there a Github repo for this plugin? =
 
-Yes, there is, [visit the GitHub repo](https://github.com/Uberfacil/dynamic-year-block).
+Yes, there is, [visit the GitHub repo](https://github.com/EpicoStudio/dynamic-year-block).
 
 = Is this a static or a dynamic block? =
 
