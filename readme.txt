@@ -13,7 +13,11 @@ A block that always displays the current year.
 
 == Description ==
 
-Auto update the copyright year in your website footer dynamically. At the turn of each year, the number will automatically change to reflect the current year.
+The Dynamic Year Block will automatically update the copyright year in your website footer. At the turn of each year, the number will automatically change to reflect the current year, freeing you from manually editing the year every new year's eve.
+
+The plugin works for both classic and block themes, but it is especially useful in the context of the **Site Editor**, where you can visually change the footer template part without messing with code. Just insert the Dynamic Year Block into your copyright notice and you're done. 💪
+
+⚠️ **Important**: please configure your timezone in “Settings → General → Timezone” in your WordPress dashboard, so that the year displayed by the block matches your server time and the timezone set in WordPress.
 
 == Installation ==
 
@@ -55,15 +59,16 @@ Please reach out via the official [plugin support forum](https://wordpress.org/s
 
 Feel free to ask questions, request new features or report bugs.
 
-You can also follow the development of the plugin in the official [GitHub repository](https://github.com/EpicoStudio/dynamic-year-block), where you can see the complete code.
+You can also follow the development of the plugin in the official Épico Studio [GitHub repository](https://github.com/EpicoStudio/dynamic-year-block), where you can see the complete code.
 
 = How can I support the development of the Dynamic Year Block? =
 You can help with a [donation](https://ubr.link/donate-wp) or a [positive review](https://wordpress.org/support/plugin/dynamic-year-block/reviews/#new-post), if you find it useful.
 
 == Screenshots ==
 
-1. Adding the block in the footer template, using the site editor.
-2. Block options: you can choose between a two-digit and four-digit year.
+1. Searching for the Dynamic Year Block in the block inserter.
+2. Block added in the footer copyright message.
+3. Block settings: you can choose between a two-digit and four-digit year.
 
 == Changelog ==
 
