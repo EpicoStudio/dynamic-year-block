@@ -71,6 +71,8 @@ You can help with a [donation](https://ubr.link/donate-wp) or a [positive review
 1. Searching for the Dynamic Year Block in the block inserter.
 2. Block added in the footer copyright message.
 3. Block settings: you can choose between a two-digit and four-digit year.
+4. Adding the Dynamic Year Block block inside a Row block to display it horizontally with other blocks.
+
 
 == Changelog ==
 
