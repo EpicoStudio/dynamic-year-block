@@ -13,7 +13,7 @@ A block that always displays the current year.
 
 == Description ==
 
-The Dynamic Year Block will automatically update the copyright year in your website footer. At the turn of each year, the number will automatically change to reflect the current year, freeing you from manually editing the year every new year's eve.
+The **Dynamic Year Block** will automatically update the copyright year in your website footer. At the turn of each year, the number will automatically change to reflect the current year, freeing you from manually editing the year every new year's eve.
 
 The plugin works for both classic and block themes, but it is especially useful in the context of the **Site Editor**, where you can visually change the footer template part without messing with code. Just insert the Dynamic Year Block into your copyright notice and you're done. 💪
 
@@ -31,7 +31,7 @@ The plugin works for both classic and block themes, but it is especially useful 
 = Manual Installation: =
 1. Upload the dynamic-year-block.zip file via the plugin page of WordPress by clicking “Add New” and selecting the zip from your local computer, or alternatively upload the decompressed `dynamic-year-block` folder to your `/wp-content/plugins/` directory on your server, via SFTP/FTP.
 2. Activate the plugin through the “Plugins” menu in WordPress.
-3. Search for the “Current Year” block in any block inserter within the block editor.
+3. Search for the “Dynamic Year” block in any block inserter within the block editor.
 4. Optionally, customize the year format in the sidebar of the block editor. The plugin does not create menus or additional settings in the WordPress dashboard.
 
 == Frequently Asked Questions ==
@@ -41,6 +41,8 @@ This eliminates the need to manually edit the year of your website's copyright s
 
 = What is the recommended way to use it? =
 It is recommended to insert it in the footer template part of your block's theme, but it can be used anywhere in your content.
+
+Also, you will probably want to use it within a **Row** block to make it appear horizontally with other text elements, as demonstrated in the fourth screenshot above.
 
 = Will this plugin hinder my website loading performance? =
 Not at all, the plugin is quite simple. It does not add any CSS or Javascript on its own. If you want to style the text in any way, you will use the Block Editor's native features to do so.
