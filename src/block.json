@@ -2,11 +2,11 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "epico/dynamic-year-block",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"title": "Dynamic Year",
 	"category": "text",
 	"icon": "calendar",
-	"keywords": [ "year", "dynamic", "block", "blocks", "footer", "copyright" ],
+	"keywords": [ "year", "dynamic", "block", "footer", "copyright" ],
 	"description": "A block that always displays the current year.",
 	"textdomain": "dynamic-year-block",
 	"attributes": {
@@ -20,8 +20,9 @@
         "foregroundColor"
 	],
 	"supports": {
-		"align": true,
+		"anchor": true,
 		"html": false,
+		"className": true,
 		"__experimentalBorder": {
 			"color": true,
 			"radius": true,
@@ -47,10 +48,7 @@
 			"__experimentalFontStyle": true,
 			"__experimentalLetterSpacing": true,
 			"__experimentalDefaultControls": {
-				"fontSize": true,
-				"lineHeight": true,
-				"fontAppearance": true,
-				"letterSpacing": true
+				"fontSize": true
 			}
 		}
 	},

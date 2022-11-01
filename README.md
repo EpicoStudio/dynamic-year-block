@@ -2,11 +2,11 @@
 # Dynamic Year Block
 
 * Donate link: https://ubr.link/donate-wp
-* Tags: gutenberg, block, blocks, year, dynamic, copyright, footer
-* Tested up to: 6.0
+* Tags: year, dynamic, copyright, footer, block
+* Tested up to: 6.1
 * Requires at least: 5.9
 * Requires PHP: 7.0
-* Stable tag: 0.1.0
+* Stable tag: 0.2.0
 * License: GPL-2.0-or-later
 
 Auto update the copyright year in your website footer dynamically. At the turn of each year, the number will automatically change to reflect the current year.

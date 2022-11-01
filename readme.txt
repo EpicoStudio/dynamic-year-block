@@ -1,7 +1,7 @@
 === Dynamic Year Block ===
 Contributors:      pagelab, epicostudio
-Tags:              gutenberg, block, blocks, year, dynamic, copyright, footer
-Tested up to:      6.0
+Tags:              year, dynamic, copyright, footer, block
+Tested up to:      6.1
 Requires at least: 5.9
 Requires PHP:      7.0
 Stable tag:        0.1.0

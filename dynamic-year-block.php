@@ -3,15 +3,14 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year.
- * Version:           0.1.0
+ * Version:           0.2.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
  * Author URI:        http://epico.studio
- * License:           GPL-2.0-or-later
+ * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       dynamic-year-block
- * Domain Path:       dynamic-year-block
  *
  * @package           epico
  */
@@ -41,12 +40,13 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 
 		// Return the block markup with the current year.
 		return sprintf(
-			'<div %1$s><p class="dynamic-year_%2$s">%2$s</div>',
+			'<div %1$s><p class="dynamic-year-%2$s">%2$s</div>',
 			$wrapper_attributes,
 			$dynamic_year
 		);
 	}
 }
+
 
 /**
  * Registers the `epico/dynamic-year-block` block on the server.
@@ -65,13 +65,13 @@ if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
 	    register_block_type(
 	    	__DIR__ . '/build',
 	    	array(
+		        'api_version' => 2,
 	        	'render_callback' => 'epico_render_block_dynamic_year_block',
 	    	)
 	    );
 
-	    // Load available translations.
+	    // Load available translations ($path is not needed here, as this is hosted on WordPress.org).
 	    wp_set_script_translations( 'epico-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
 	}
 }
-
 add_action( 'init', 'epico_register_block_dynamic_year_block' );
