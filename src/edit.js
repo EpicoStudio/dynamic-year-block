@@ -49,7 +49,7 @@ export default function Edit( {
 					help={ sprintf(
 						/* translators: %1s and %2s are the two-digit current year. See http://php.net/date. */
 						__(
-							'The two-digit abreviation is commonly used immediately after an apostrophe (i.e., ’%1$s) or as part of a date range (i.e., 2021-%2$s).',
+							'The two-digit abbreviation is commonly used immediately after an apostrophe (i.e., ’%1$s) or as part of a date range (i.e., 2021-%2$s).',
 							'dynamic-year-block'
 						),
 						year,
