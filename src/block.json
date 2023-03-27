@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "epico/dynamic-year-block",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"title": "Dynamic Year",
 	"category": "text",
 	"icon": "calendar",
@@ -16,8 +16,8 @@
 		}
 	},
 	"usesContext": [
-        "backgroundColor",
-        "foregroundColor"
+		"backgroundColor",
+		"foregroundColor"
 	],
 	"supports": {
 		"anchor": true,
@@ -32,6 +32,9 @@
 		"spacing": {
 			"padding": true,
 			"margin": true
+		},
+		"dimensions": {
+			"minHeight": true
 		},
 		"color": {
 			"gradients": true,

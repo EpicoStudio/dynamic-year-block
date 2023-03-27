@@ -1,6 +1,6 @@
 {
 	"name": "dynamic-year-block",
-	"version": "0.1.0",
+	"version": "0.3.0",
 	"description": "Add the currenty year.",
 	"author": "Marcio Duarte",
 	"license": "GPL-2.0-or-later",
@@ -18,6 +18,6 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^24.4.0"
+		"@wordpress/scripts": "^26.0.0"
 	}
 }

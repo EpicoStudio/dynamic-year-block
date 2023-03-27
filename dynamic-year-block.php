@@ -3,7 +3,7 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year.
- * Version:           0.2.0
+ * Version:           0.3.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
