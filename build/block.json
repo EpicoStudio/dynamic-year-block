@@ -1,65 +1,73 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "epico/dynamic-year-block",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "title": "Dynamic Year",
   "category": "text",
   "icon": "calendar",
   "keywords": [
-    "year",
-    "dynamic",
-    "block",
-    "footer",
-    "copyright"
+	"year",
+	"dynamic",
+	"block",
+	"footer",
+	"copyright"
   ],
   "description": "A block that always displays the current year.",
   "textdomain": "dynamic-year-block",
   "attributes": {
-    "format": {
-      "type": "string",
-      "default": "Y"
-    }
+	"format": {
+	  "type": "string",
+	  "default": "Y"
+	}
   },
   "usesContext": [
-    "backgroundColor",
-    "foregroundColor"
+	"backgroundColor",
+	"foregroundColor"
   ],
   "supports": {
-    "anchor": true,
-    "html": false,
-    "className": true,
-    "__experimentalBorder": {
-      "color": true,
-      "radius": true,
-      "style": true,
-      "width": true
-    },
-    "spacing": {
-      "padding": true,
-      "margin": true
-    },
-    "dimensions": {
-      "minHeight": true
-    },
-    "color": {
-      "gradients": true,
-      "__experimentalDefaultControls": {
-        "background": true,
-        "text": true
-      }
-    },
-    "typography": {
-      "fontSize": true,
-      "lineHeight": true,
-      "__experimentalFontFamily": true,
-      "__experimentalFontWeight": true,
-      "__experimentalFontStyle": true,
-      "__experimentalLetterSpacing": true,
-      "__experimentalDefaultControls": {
-        "fontSize": true
-      }
-    }
+	"anchor": true,
+	"html": false,
+	"align": true,
+	"className": true,
+	"__experimentalBorder": {
+	  "color": true,
+	  "radius": true,
+	  "style": true,
+	  "width": true
+	},
+	"spacing": {
+	  "padding": true,
+	  "margin": true
+	},
+	"dimensions": {
+	  "minHeight": true
+	},
+	"filter": {
+		"duotone": true
+	},
+	"color": {
+	  "gradients": true,
+	  "link": true,
+	  "__experimentalDefaultControls": {
+		"background": true,
+		"text": true,
+		"link": true
+	  }
+	},
+	"typography": {
+	  "fontSize": true,
+	  "lineHeight": true,
+	  "__experimentalFontFamily": true,
+	  "__experimentalFontWeight": true,
+	  "__experimentalFontStyle": true,
+	  "__experimentalTextTransform": true,
+	  "__experimentalTextDecoration": true,
+	  "__experimentalLetterSpacing": true,
+	  "__experimentalDefaultControls": {
+		"fontSize": true
+	  }
+	}
   },
   "editorScript": "file:./index.js"
 }

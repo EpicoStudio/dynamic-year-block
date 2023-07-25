@@ -3,7 +3,7 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year.
- * Version:           0.3.0
+ * Version:           0.4.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
@@ -34,7 +34,7 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		$wrapper_attributes = get_block_wrapper_attributes( array( 'class' => $align_class_name ) );
 
 		// Get the current year.
-	    $current_date = current_datetime();
+		$current_date = current_datetime();
 		$format       = empty( $attributes['format'] ) ? 'Y' : $attributes['format'];
 		$dynamic_year = $current_date->format($format);
 
@@ -56,22 +56,22 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
  */
 if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
 	function epico_register_block_dynamic_year_block() {
-	    if ( ! function_exists( 'register_block_type' ) ) {
-	        // The block editor is not available.
-	        return;
-	    }
+		if ( ! function_exists( 'register_block_type' ) ) {
+			// The block editor is not available.
+			return;
+		}
 
-	    // Register the block and specify the callback.
-	    register_block_type(
-	    	__DIR__ . '/build',
-	    	array(
-		        'api_version' => 2,
-	        	'render_callback' => 'epico_render_block_dynamic_year_block',
-	    	)
-	    );
+		// Register the block and specify the callback.
+		register_block_type(
+			__DIR__ . '/build',
+			array(
+				'api_version' => 2,
+				'render_callback' => 'epico_render_block_dynamic_year_block',
+			)
+		);
 
-	    // Load available translations ($path is not needed here, as this is hosted on WordPress.org).
-	    wp_set_script_translations( 'epico-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
+		// Load available translations ($path is not needed here, as this is hosted on WordPress.org).
+		wp_set_script_translations( 'epico-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
 	}
 }
 add_action( 'init', 'epico_register_block_dynamic_year_block' );

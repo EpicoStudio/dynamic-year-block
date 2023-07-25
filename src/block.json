@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "epico/dynamic-year-block",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"title": "Dynamic Year",
 	"category": "text",
 	"icon": "calendar",
@@ -38,9 +38,11 @@
 		},
 		"color": {
 			"gradients": true,
+			"link": true,
 			"__experimentalDefaultControls": {
 				"background": true,
-				"text": true
+				"text": true,
+				"link": true
 			}
 		},
 		"typography": {
@@ -49,6 +51,8 @@
 			"__experimentalFontFamily": true,
 			"__experimentalFontWeight": true,
 			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
 			"__experimentalLetterSpacing": true,
 			"__experimentalDefaultControls": {
 				"fontSize": true

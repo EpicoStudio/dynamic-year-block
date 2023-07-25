@@ -1,10 +1,10 @@
 === Dynamic Year Block ===
 Contributors:      pagelab, epicostudio
 Tags:              year, dynamic, copyright, footer, block
-Tested up to:      6.2
+Tested up to:      6.3
 Requires at least: 5.9
 Requires PHP:      7.0
-Stable tag:        0.3.0
+Stable tag:        0.4.0
 License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
@@ -76,9 +76,13 @@ You can help with a [donation](https://ubr.link/donate-wp) or a [positive review
 
 == Changelog ==
 
+= 0.4.0 =
+* Adding support for gradients and alignments.
+* Updating the code for WordPress version 6.3
+
 = 0.3.0 =
 * Adding missing translation strings.
-* Updating the code for WordPress version 6.1
+* Updating the code for WordPress version 6.2
 
 = 0.2.0 =
 * Adding missing translation strings.
