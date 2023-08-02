@@ -47,5 +47,6 @@ No, this plugin works exclusively in the Block Editor.
 The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time, using the timezone specified in the “Settings → General → Timezone” on your WordPress dashboard. So it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
 
 ## How can I support the development of the Dynamic Year Block?
-You can help with a [donation](https://ubr.link/donate-wp), by [visiting our website](https://epico.studio) or publishing a [https://wordpress.org/support/plugin/dynamic-year-block/reviews/#new-post), if you find it useful.
+You can help with a [donation](https://ubr.link/donate-wp), by [visiting our website](https://epico.studio) or publishing a [positive review](https://wordpress.org/support/plugin/dynamic-year-block/reviews/#new-post), if you find it useful.
+
 

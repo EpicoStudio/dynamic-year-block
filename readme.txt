@@ -40,7 +40,7 @@ The plugin works for both classic and block themes, but it is especially useful 
 This eliminates the need to manually edit the year of your website's copyright statement,  usually located at the bottom of each page.
 
 = What is the recommended way to use it? =
-It is recommended to insert it in the footer template part of your block's theme, but it can be used anywhere in your content.
+It is recommended to insert it in the footer template part of your block theme, but it can be used anywhere in your content.
 
 Also, you will probably want to use it within a **Row** block to make it appear horizontally with other text elements, as demonstrated in the fourth screenshot above.
 
@@ -64,7 +64,7 @@ Feel free to ask questions, request new features or report bugs.
 You can also follow the development of the plugin in the official Épico Studio [GitHub repository](https://github.com/EpicoStudio/dynamic-year-block), where you can see the complete code.
 
 = How can I support the development of the Dynamic Year Block? =
-You can help with a [donation](https://ubr.link/donate-wp), by [visiting our website](https://epico.studio) or publishing a [https://wordpress.org/support/plugin/dynamic-year-block/reviews/#new-post), if you find it useful.
+You can help with a [donation](https://ubr.link/donate-wp), by [visiting our website](https://epico.studio) or publishing a [positive review](https://wordpress.org/support/plugin/dynamic-year-block/reviews/#new-post), if you find it useful.
 
 == Screenshots ==
 
@@ -77,16 +77,16 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 == Changelog ==
 
 = 0.4.0 =
-* Adding support for gradients and alignments.
-* Updating the code for WordPress version 6.3
+* Added support for gradients and alignments.
+* Updated the code for WordPress version 6.3
 
 = 0.3.0 =
-* Adding missing translation strings.
-* Updating the code for WordPress version 6.2
+* Added missing translation strings.
+* Updated the code for WordPress version 6.2
 
 = 0.2.0 =
-* Adding missing translation strings.
-* Updating the code for WordPress version 6.1
+* Added missing translation strings.
+* Updated the code for WordPress version 6.1
 
 = 0.1.0 =
 * Initial release
