@@ -17,12 +17,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'init', 'wpdocs_load_textdomain' );
-
-function wpdocs_load_textdomain() {
-	load_plugin_textdomain( 'wpdocs_textdomain', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-
 /**
  * Renders the `dynamic-year-block` on the server.
  *
