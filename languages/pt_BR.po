@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Dynamic Year Block 0.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dynamic-year-"
 "block\n"
-"POT-Creation-Date: 2022-11-01T18:14:59+00:00\n"
-"PO-Revision-Date: 2023-03-27 15:10-0300\n"
+"POT-Creation-Date: 2023-08-29T16:40:10+00:00\n"
+"PO-Revision-Date: 2023-08-29 13:40-0300\n"
 "Last-Translator: Márcio Duarte <contato@uberfacil.com>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Domain: dynamic-year-block\n"
 
 #. Plugin Name of the plugin
@@ -34,34 +34,50 @@ msgid "Márcio Duarte"
 msgstr "Márcio Duarte"
 
 #. Author URI of the plugin
-msgid "http://epico.studio"
-msgstr "http://epico.studio"
+msgid "https://epico.studio"
+msgstr "https://epico.studio"
 
-#: build/index.js:65 build/index.js:45
+#: build/index.js:60 build/index.js:34
 msgid "Settings"
 msgstr "Configurações"
 
-#: build/index.js:68 build/index.js:48
+#: build/index.js:63 build/index.js:37
 msgid "Year format:"
 msgstr "Formato do ano:"
 
-#: build/index.js:71 build/index.js:51
+#: build/index.js:66 build/index.js:41
 msgid "Four digits"
 msgstr "Quatro dígitos"
 
-#: build/index.js:74 build/index.js:52
+#: build/index.js:69 build/index.js:45
 msgid "Two digits"
 msgstr "Dois dígitos"
 
 #. translators: %1s and %2s are the two-digit current year. See http://php.net/date.
-#: build/index.js:79 build/index.js:56
+#: build/index.js:73 build/index.js:51
 msgid ""
-"The two-digit abreviation is commonly used immediately after an apostrophe "
+"The two-digit abbreviation is commonly used immediately after an apostrophe "
 "(i.e., ’%1$s) or as part of a date range (i.e., 2021-%2$s)."
 msgstr ""
 "A abreviação de dois dígitos é comumente usada imediatamente após um "
 "apóstrofo (ou seja, ’%1$s) ou como parte de um intervalo de data (ou seja, "
 "2021-%2$s)."
+
+#: build/index.js:78 build/index.js:65
+msgid "Text Before Date"
+msgstr "Texto antes da data"
+
+#: build/index.js:80 build/index.js:67
+msgid "Add text before the current year."
+msgstr "Adicione texto antes do ano atual."
+
+#: build/index.js:85 build/index.js:76
+msgid "Text After Date"
+msgstr "Texto após a data"
+
+#: build/index.js:87 build/index.js:78
+msgid "Add text after the current year."
+msgstr "Adicione texto após o ano atual."
 
 #: build/block.json
 msgctxt "block title"
@@ -85,11 +101,6 @@ msgstr "bloco"
 
 #: build/block.json
 msgctxt "block keyword"
-msgid "blocks"
-msgstr "blocos"
-
-#: build/block.json
-msgctxt "block keyword"
 msgid "footer"
 msgstr "rodapé"
 
@@ -102,3 +113,13 @@ msgstr "copyright"
 msgctxt "block description"
 msgid "A block that always displays the current year."
 msgstr "Um bloco que sempre exibe o ano atual."
+
+#~ msgid "Before Element"
+#~ msgstr "Texto antes da data"
+
+#~ msgid "After Element"
+#~ msgstr "Texto após a data"
+
+#~ msgctxt "block keyword"
+#~ msgid "blocks"
+#~ msgstr "blocos"

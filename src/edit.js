@@ -3,9 +3,19 @@
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import {
+	InspectorControls,
+	useBlockProps,
+	RichText,
+	AlignmentToolbar,
+	BlockControls
+} from '@wordpress/block-editor';
 
-import { PanelBody, RadioControl } from '@wordpress/components';
+import { PanelBody,
+	RadioControl,
+	TextControl
+} from '@wordpress/components';
+
 import { __, sprintf } from '@wordpress/i18n';
 
 /**
@@ -19,7 +29,7 @@ import { __, sprintf } from '@wordpress/i18n';
  * @return {JSX.Element} React element.
  */
 export default function Edit( {
-	attributes: { format }, // The default value is saved on block.json.
+	attributes: { format, beforeElement, afterElement, alignment }, // The default value is saved on block.json.
 	setAttributes,
 } ) {
 	// Define the two-digit year for the help text.
@@ -61,6 +71,28 @@ export default function Edit( {
 						} )
 					}
 				/>
+				<TextControl
+					label={ __( 'Text Before Date', 'dynamic-year-block' ) }
+					value={ beforeElement }
+					help={ __(
+							'Add text before the current year.',
+							'dynamic-year-block'
+						) }
+					onChange={ ( newBeforeElement ) =>
+						setAttributes( { beforeElement: newBeforeElement } )
+					}
+				/>
+				<TextControl
+					label={ __( 'Text After Date', 'dynamic-year-block' ) }
+					value={ afterElement }
+					help={ __(
+							'Add text after the current year.',
+							'dynamic-year-block'
+						) }
+					onChange={ ( newAfterElement ) =>
+						setAttributes( { afterElement: newAfterElement } )
+					}
+				/>
 			</PanelBody>
 		</InspectorControls>
 	);
@@ -81,8 +113,41 @@ export default function Edit( {
 			{ inspectorControls }
 			<style>{ editorInlineStyle }</style>
 			<div { ...blockProps }>
-				<p className={ 'dynamic-year-' + currentYear }>
+				<BlockControls>
+					<AlignmentToolbar
+						value={ alignment }
+						onChange={ ( newAlignment ) =>
+							setAttributes( {
+								alignment: newAlignment === undefined ? 'none' : newAlignment,
+							} )
+						}
+					/>
+				</BlockControls>
+				<p
+					className={ 'dynamic-year-' + currentYear }
+					style={ { textAlign: alignment } }
+				>
+					<RichText
+						tagName="span"
+						className="dynamic-year-before"
+						allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
+						value={ beforeElement }
+						onChange={ ( newBeforeElement ) =>
+							setAttributes( { beforeElement: newBeforeElement } )
+						}
+					/>
+					{ format === 'Y' && beforeElement !== '' ? ' ' : null }
 					{ currentYear }
+					{ afterElement !== '' ? ' ' : null }
+					<RichText
+						tagName="span"
+						className="dynamic-year-after"
+						allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
+						value={ afterElement }
+						onChange={ ( newAfterElement ) =>
+							setAttributes( { afterElement: newAfterElement } )
+						}
+					/>
 				</p>
 			</div>
 		</>

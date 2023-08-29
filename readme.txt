@@ -1,10 +1,10 @@
 === Dynamic Year Block ===
 Contributors:      pagelab, epicostudio
-Tags:              year, dynamic, copyright, footer, block
-Tested up to:      6.3
+Tags:              year, date, dynamic, copyright, footer, block
+Tested up to:      6.3.1
 Requires at least: 5.9
 Requires PHP:      7.0
-Stable tag:        0.4.0
+Stable tag:        0.5.0
 License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
@@ -17,7 +17,10 @@ The **Dynamic Year Block** will automatically update the copyright year in your 
 
 The plugin works for both classic and block themes, but it is especially useful in the context of the **Site Editor**, where you can visually change the footer template part without messing with code. Just insert the Dynamic Year Block into your copyright notice and you're done. 💪
 
+You can open this [WordPress Playground site](https://playground.wordpress.net/?plugin=dynamic-year-block) in your browser to quickly test it.
+
 ⚠️ **Important**: please configure your timezone in “Settings → General → Timezone” in your WordPress dashboard, so that the year displayed by the block matches your server time and the timezone set in WordPress.
+
 
 == Installation ==
 
@@ -43,6 +46,9 @@ This eliminates the need to manually edit the year of your website's copyright s
 It is recommended to insert it in the footer template part of your block theme, but it can be used anywhere in your content.
 
 Also, you will probably want to use it within a **Row** block to make it appear horizontally with other text elements, as demonstrated in the fourth screenshot above.
+
+= Is it possible to insert text before and after the current year? =
+Yes, this has been possible since version 0.5.0. You can also align the text. If you do not see these options in the block inspector on your sidebar, update your plugin to the latest version.
 
 = Will this plugin hinder my website loading performance? =
 Not at all, the plugin is quite simple. It does not add any CSS or Javascript on its own. If you want to style the text in any way, you will use the Block Editor's native features to do so.
@@ -75,6 +81,10 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 
 == Changelog ==
+
+= 0.5.0 =
+* Added the option to insert text before and after the current year.
+* Added the option to align the text within the block.
 
 = 0.4.0 =
 * Added support for gradients and alignments.

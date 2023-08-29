@@ -2,13 +2,14 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "epico/dynamic-year-block",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "title": "Dynamic Year",
   "category": "text",
   "icon": "calendar",
   "keywords": [
     "year",
     "dynamic",
+    "date",
     "block",
     "footer",
     "copyright"
@@ -19,6 +20,18 @@
     "format": {
       "type": "string",
       "default": "Y"
+    },
+    "beforeElement": {
+      "type": "string",
+      "default": ""
+    },
+    "afterElement": {
+      "type": "string",
+      "default": ""
+    },
+    "alignment": {
+      "type": "string",
+      "default": "none"
     }
   },
   "usesContext": [
