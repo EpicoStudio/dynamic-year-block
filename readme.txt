@@ -9,13 +9,13 @@ License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
 
-A block that always displays the current year.
+A block that always displays the current year in your footer copyright notice.
 
 == Description ==
 
 The **Dynamic Year Block** will automatically update the copyright year in your website footer. At the turn of each year, the number will automatically change to reflect the current year, freeing you from manually editing the year every new year's eve.
 
-The plugin works for both classic and block themes, but it is especially useful in the context of the **Site Editor**, where you can visually change the footer template part without messing with code. Just insert the Dynamic Year Block into your copyright notice and you're done. 💪
+The plugin works for both classic and block themes, but it is especially useful in the context of the **Site Editor**, where you can visually change the footer template part without messing with code. Just insert the Dynamic Year Block, enter your copyright notice and you're done. 💪
 
 You can open [this WordPress Playground site](https://playground.wordpress.net/?plugin=dynamic-year-block) in your browser to quickly test it.
 
