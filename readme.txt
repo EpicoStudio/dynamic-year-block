@@ -1,4 +1,4 @@
-=== Dynamic Year Block ===
+=== Dynamic Year Block – display a copyright notice in your footer with the current year ===
 Contributors:      pagelab, epicostudio
 Tags:              year, date, dynamic, copyright, footer, block
 Tested up to:      6.3.1
