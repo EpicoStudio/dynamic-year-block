@@ -17,7 +17,7 @@ The **Dynamic Year Block** will automatically update the copyright year in your 
 
 The plugin works for both classic and block themes, but it is especially useful in the context of the **Site Editor**, where you can visually change the footer template part without messing with code. Just insert the Dynamic Year Block into your copyright notice and you're done. 💪
 
-You can open this [WordPress Playground site](https://playground.wordpress.net/?plugin=dynamic-year-block) in your browser to quickly test it.
+You can open [this WordPress Playground site](https://playground.wordpress.net/?plugin=dynamic-year-block) in your browser to quickly test it.
 
 ⚠️ **Important**: please configure your timezone in “Settings → General → Timezone” in your WordPress dashboard, so that the year displayed by the block matches your server time and the timezone set in WordPress.
 
