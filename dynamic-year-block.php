@@ -3,7 +3,7 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year.
- * Version:           0.6.0
+ * Version:           0.6.1
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
@@ -50,11 +50,24 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		$afterStart = !empty($attributes['afterElement']) ? '<span class="dynamic-year-after">' : '';
 		$afterEnd   = !empty($attributes['afterElement']) ? '</span>' : '';
 
+		// Define the aria-current attribute.
+		$aria_current = '';
+		if ( is_front_page() ) :
+			$aria_current = ' aria-current="page"';
+		elseif ( is_home() && ( (int) get_option( 'page_for_posts' ) !== get_queried_object_id() ) ) :
+			// Edge case where the Reading settings has a posts page set but not a static homepage.
+			$aria_current = ' aria-current="page"';
+		endif;
+
+		// Check if the site title is included and define the markup.
+		$siteName   = ( $attributes['displaySiteName'] !== false ) ? ' <a target="_self" rel="home" href="' .  get_bloginfo( 'url', 'display' ) . '"' . $aria_current .  '>' . get_bloginfo( 'name', 'display' ) . '</a>' : '';
+
 		// Markup.
 		$markup  = '<div ' . $wrapper_attributes . '>';
 		$markup .= '<p class="dynamic-year-' . esc_attr( $dynamic_year ) . esc_attr( $alignClass ) . '">';
 		$markup .= $beforeStart . force_balance_tags( wp_kses_post( $before ) ) . $beforeEnd;
 		$markup .= esc_attr( $dynamic_year );
+		$markup .= $siteName;
 		$markup .= $afterStart . force_balance_tags( wp_kses_post( $after ) ) . $afterEnd;
 		$markup .= '</p>';
 		$markup .= '</div>';
@@ -72,10 +85,10 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
  */
 if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
 	function epico_register_block_dynamic_year_block() {
-		if ( ! function_exists( 'register_block_type' ) ) {
+		if ( ! function_exists( 'register_block_type' ) ) :
 			// The block editor is not available.
 			return;
-		}
+		endif;
 
 		// Register the block and specify the callback.
 		register_block_type(

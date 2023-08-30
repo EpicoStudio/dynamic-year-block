@@ -6,7 +6,7 @@
 * Tested up to: 6.3.1
 * Requires at least: 5.9
 * Requires PHP: 7.0
-* Stable tag: 0.6.0
+* Stable tag: 0.6.1
 * License: GPL 2.0 or later
 
 Auto update the copyright year in your website footer dynamically. At the turn of each year, the number will automatically change to reflect the current year.

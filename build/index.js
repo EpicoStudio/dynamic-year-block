@@ -132,6 +132,12 @@ function Edit({
       beforeElement: newBeforeElement
     })
   }), currentYear, displaySiteName ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, ' ', (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    onClick: event => {
+      event.preventDefault(); // Prevent the default link behavior
+    },
+
+    target: "_self",
+    rel: "home",
     href: dynamicYearBlockData.siteUrl
   }, dynamicYearBlockData.siteTitle)) : null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
     tagName: "span",
@@ -203,7 +209,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"epico/dynamic-year-block","version":"0.6.0","title":"Dynamic Year","category":"text","icon":"calendar","keywords":["year","dynamic","date","block","footer","copyright"],"description":"A block that always displays the current year.","textdomain":"dynamic-year-block","attributes":{"format":{"type":"string","default":"Y"},"beforeElement":{"type":"string","default":""},"afterElement":{"type":"string","default":""},"alignment":{"type":"string","default":"none"},"displaySiteName":{"type":"boolean","default":false}},"usesContext":["backgroundColor","foregroundColor"],"supports":{"anchor":true,"html":false,"className":true,"__experimentalBorder":{"color":true,"radius":true,"style":true,"width":true},"spacing":{"padding":true,"margin":true},"dimensions":{"minHeight":true},"color":{"gradients":true,"link":true,"__experimentalDefaultControls":{"background":true,"text":true,"link":true}},"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalTextTransform":true,"__experimentalTextDecoration":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true}}},"editorScript":"file:./index.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"epico/dynamic-year-block","version":"0.6.1","title":"Dynamic Year","category":"text","icon":"calendar","keywords":["year","dynamic","date","block","footer","copyright"],"description":"A block that always displays the current year.","textdomain":"dynamic-year-block","attributes":{"format":{"type":"string","default":"Y"},"beforeElement":{"type":"string","default":""},"afterElement":{"type":"string","default":""},"alignment":{"type":"string","default":"none"},"displaySiteName":{"type":"boolean","default":false}},"usesContext":["backgroundColor","foregroundColor"],"supports":{"anchor":true,"html":false,"className":true,"__experimentalBorder":{"color":true,"radius":true,"style":true,"width":true},"spacing":{"padding":true,"margin":true},"dimensions":{"minHeight":true},"color":{"gradients":true,"link":true,"__experimentalDefaultControls":{"background":true,"text":true,"link":true}},"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalTextTransform":true,"__experimentalTextDecoration":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true}}},"editorScript":"file:./index.js"}');
 
 /***/ })
 

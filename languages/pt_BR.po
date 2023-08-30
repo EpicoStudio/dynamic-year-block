@@ -1,12 +1,12 @@
-# Copyright (C) 2022 Márcio Duarte
+# Copyright (C) 2023 Márcio Duarte
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic Year Block 0.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dynamic-year-"
 "block\n"
-"POT-Creation-Date: 2023-08-30T18:33:52+00:00\n"
-"PO-Revision-Date: 2023-08-30 15:38-0300\n"
+"POT-Creation-Date: 2023-08-30T22:20:22+00:00\n"
+"PO-Revision-Date: 2023-08-30 19:20-0300\n"
 "Last-Translator: Márcio Duarte <contato@uberfacil.com>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -59,8 +59,8 @@ msgid ""
 "The two-digit abbreviation is often used after an apostrophe (e.g., ’%1$s) "
 "or in a date range (e.g., 2021-%2$s)."
 msgstr ""
-"A abreviação de dois dígitos é comumente usada após um apóstrofo (ex: "
-"’%1$s) ou em um intervalo de data (ex: 2021-%2$s)."
+"A abreviação de dois dígitos é comumente usada após um apóstrofo (ex: ’%1$s) "
+"ou em um intervalo de data (ex: 2021-%2$s)."
 
 #: build/index.js:80 build/index.js:76
 msgid "Text Before Date"
@@ -94,7 +94,7 @@ msgstr ""
 "Habilite para adicionar texto personalizado depois. Padrão: “Todos os "
 "direitos reservados”. Alternar redefinirá para o padrão."
 
-#: build/index.js:129 build/index.js:140 build/index.js:146 build/index.js:163
+#: build/index.js:129 build/index.js:142 build/index.js:146 build/index.js:167
 msgid "Enter text"
 msgstr "Inserir texto"
 

@@ -4,7 +4,7 @@ Tags:              year, date, dynamic, copyright, footer, block
 Tested up to:      6.3.1
 Requires at least: 5.9
 Requires PHP:      7.0
-Stable tag:        0.6.0
+Stable tag:        0.6.1
 License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
@@ -81,6 +81,11 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 
 == Changelog ==
+
+= 0.6.1 =
+* Bug fix: the linked site title appears on the front-end as expected.
+* Bug fix: preventing the default link behaviour on the editor window.
+* Accessibility improvement: added the aria-current attribute for the site title link.
 
 = 0.6.0 =
 * Refactored the option to insert text before and after the current year.

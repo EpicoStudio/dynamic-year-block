@@ -153,7 +153,14 @@ export default function Edit( {
 					{ displaySiteName ? (
 						<>
 							{' '}
-							<a href={dynamicYearBlockData.siteUrl}>{dynamicYearBlockData.siteTitle}</a>
+							<a
+								onClick={(event) => {
+									event.preventDefault(); // Prevent the default link behavior
+								}}
+								target="_self"
+								rel="home"
+								href={dynamicYearBlockData.siteUrl}>{dynamicYearBlockData.siteTitle}
+							</a>
 						</>
 					) : null}
 					<RichText
