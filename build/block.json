@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "epico/dynamic-year-block",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "title": "Dynamic Year",
   "category": "text",
   "icon": "calendar",
@@ -32,6 +32,10 @@
     "alignment": {
       "type": "string",
       "default": "none"
+    },
+    "displaySiteName": {
+      "type": "boolean",
+      "default": false
     }
   },
   "usesContext": [

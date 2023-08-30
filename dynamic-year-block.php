@@ -3,7 +3,7 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year.
- * Version:           0.5.0
+ * Version:           0.6.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
@@ -41,14 +41,14 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		$dynamic_year = $current_date->format($format);
 
 		// Get the optional text BEFORE the year.
-		$before      = empty( $attributes['beforeElement'] ) ? '' : $attributes['beforeElement'];
-		$beforeStart = empty( $attributes['beforeElement'] ) ? '' : '<span class="dynamic-year-before">';
-		$beforeEnd   = empty( $attributes['beforeElement'] ) ? '' : '</span>' . ( 'y' === $format ? '' : ' ' );
+		$before      = $attributes['beforeElement'] !== null ? $attributes['beforeElement'] : '';
+		$beforeStart = !empty($attributes['beforeElement']) ? '<span class="dynamic-year-before">' : '';
+		$beforeEnd   = !empty($attributes['beforeElement']) ? '</span>' : '';
 
 		// Get the optional text AFTER the year.
-		$after      = empty( $attributes['afterElement'] )   ? '' : $attributes['afterElement'];
-		$afterStart = empty( $attributes['afterElement'] )   ? '' : ' <span class="dynamic-year-after">';
-		$afterEnd   = empty( $attributes['afterElement'] )   ? '' : '</span>';
+		$after      = $attributes['afterElement'] !== null ? $attributes['afterElement'] : '';
+		$afterStart = !empty($attributes['afterElement']) ? '<span class="dynamic-year-after">' : '';
+		$afterEnd   = !empty($attributes['afterElement']) ? '</span>' : '';
 
 		// Markup.
 		$markup  = '<div ' . $wrapper_attributes . '>';
@@ -85,6 +85,12 @@ if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
 				'render_callback' => 'epico_render_block_dynamic_year_block',
 			)
 		);
+
+		// Add variables for usage on the block editor.
+		wp_add_inline_script( 'epico-dynamic-year-block-editor-script', 'const dynamicYearBlockData = ' . json_encode( array(
+			'siteTitle' => get_bloginfo( 'name' ),
+			'siteUrl' => get_bloginfo( 'url' ),
+		) ), 'before' );
 
 		// Load available translations ($path is not needed here, as this is hosted on WordPress.org).
 		wp_set_script_translations( 'epico-dynamic-year-block-editor-script-js', 'dynamic-year-block' );

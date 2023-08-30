@@ -13,7 +13,8 @@ import {
 
 import { PanelBody,
 	RadioControl,
-	TextControl
+	TextControl,
+	ToggleControl
 } from '@wordpress/components';
 
 import { __, sprintf } from '@wordpress/i18n';
@@ -29,7 +30,7 @@ import { __, sprintf } from '@wordpress/i18n';
  * @return {JSX.Element} React element.
  */
 export default function Edit( {
-	attributes: { format, beforeElement, afterElement, alignment }, // The default value is saved on block.json.
+	attributes: { format, beforeElement, afterElement, alignment, displaySiteName }, // The default value is saved on block.json.
 	setAttributes,
 } ) {
 	// Define the two-digit year for the help text.
@@ -59,7 +60,7 @@ export default function Edit( {
 					help={ sprintf(
 						/* translators: %1s and %2s are the two-digit current year. See http://php.net/date. */
 						__(
-							'The two-digit abbreviation is commonly used immediately after an apostrophe (i.e., ’%1$s) or as part of a date range (i.e., 2021-%2$s).',
+							'The two-digit abbreviation is often used after an apostrophe (e.g., ’%1$s) or in a date range (e.g., 2021-%2$s).',
 							'dynamic-year-block'
 						),
 						year,
@@ -71,26 +72,37 @@ export default function Edit( {
 						} )
 					}
 				/>
-				<TextControl
+				<ToggleControl
 					label={ __( 'Text Before Date', 'dynamic-year-block' ) }
-					value={ beforeElement }
+					checked={ beforeElement !== '' }
 					help={ __(
-							'Add text before the current year.',
-							'dynamic-year-block'
-						) }
-					onChange={ ( newBeforeElement ) =>
-						setAttributes( { beforeElement: newBeforeElement } )
+						'Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to default.',
+						'dynamic-year-block'
+					) }
+					onChange={ (newBeforeElement) =>
+						setAttributes( { beforeElement: newBeforeElement ? ( beforeElement || __( '© Copyright' + '\u00A0', 'dynamic-year-block' )) : '' } )
 					}
 				/>
-				<TextControl
-					label={ __( 'Text After Date', 'dynamic-year-block' ) }
-					value={ afterElement }
+				<ToggleControl
+					label={ __( 'Site Name After Date', 'dynamic-year-block' ) }
+					checked={ displaySiteName }
 					help={ __(
-							'Add text after the current year.',
-							'dynamic-year-block'
-						) }
-					onChange={ ( newAfterElement ) =>
-						setAttributes( { afterElement: newAfterElement } )
+						'Display the site name after the current year, linked to the homepage.',
+						'dynamic-year-block'
+					) }
+					onChange={ ( newDisplaySiteName ) =>
+						setAttributes( { displaySiteName: newDisplaySiteName } )
+					}
+				/>
+				<ToggleControl
+					label={ __( 'Text After Date', 'dynamic-year-block' ) }
+					checked={ afterElement !== '' }
+					help={ __(
+						'Enable to append custom text. Default: “All rights reserved”. Toggling resets to default.',
+						'dynamic-year-block'
+					) }
+					onChange={ (newAfterElement) =>
+						setAttributes( { afterElement: newAfterElement ? ( afterElement || __( '\u00A0' + 'All rights reserved', 'dynamic-year-block' )) : '' } )
 					}
 				/>
 			</PanelBody>
@@ -131,18 +143,24 @@ export default function Edit( {
 						tagName="span"
 						className="dynamic-year-before"
 						allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
+						placeholder={ beforeElement !== '' ? __( 'Enter text', 'dynamic-year-block' ) : '' }
 						value={ beforeElement }
 						onChange={ ( newBeforeElement ) =>
 							setAttributes( { beforeElement: newBeforeElement } )
 						}
 					/>
-					{ format === 'Y' && beforeElement !== '' ? ' ' : null }
 					{ currentYear }
-					{ afterElement !== '' ? ' ' : null }
+					{ displaySiteName ? (
+						<>
+							{' '}
+							<a href={dynamicYearBlockData.siteUrl}>{dynamicYearBlockData.siteTitle}</a>
+						</>
+					) : null}
 					<RichText
 						tagName="span"
 						className="dynamic-year-after"
 						allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
+						placeholder={ afterElement !== '' ? __( 'Enter text', 'dynamic-year-block' ) : '' }
 						value={ afterElement }
 						onChange={ ( newAfterElement ) =>
 							setAttributes( { afterElement: newAfterElement } )
