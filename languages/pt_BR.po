@@ -3,10 +3,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Dynamic Year Block 0.2.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dynamic-year-"
-"block\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dynamic-year-block\n"
 "POT-Creation-Date: 2023-08-30T22:20:22+00:00\n"
-"PO-Revision-Date: 2023-08-30 19:20-0300\n"
+"PO-Revision-Date: 2023-08-31 11:56-0300\n"
 "Last-Translator: Márcio Duarte <contato@uberfacil.com>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -26,8 +25,8 @@ msgid "https://github.com/EpicoStudio/dynamic-year-block"
 msgstr "https://github.com/EpicoStudio/dynamic-year-block"
 
 #. Description of the plugin
-msgid "A block that always displays the current year."
-msgstr "Um bloco que sempre exibe o ano atual."
+msgid "A block that always displays the current year in your copyright footer notice."
+msgstr "Um bloco que sempre exibe o ano atual no seu aviso de copyright no rodapé."
 
 #. Author of the plugin
 msgid "Márcio Duarte"
@@ -56,11 +55,11 @@ msgstr "Dois dígitos"
 #. translators: %1s and %2s are the two-digit current year. See http://php.net/date.
 #: build/index.js:75 build/index.js:62
 msgid ""
-"The two-digit abbreviation is often used after an apostrophe (e.g., ’%1$s) "
-"or in a date range (e.g., 2021-%2$s)."
+"The two-digit abbreviation is often used after an apostrophe (e.g., ’%1$s) or in a "
+"date range (e.g., 2021-%2$s)."
 msgstr ""
-"A abreviação de dois dígitos é comumente usada após um apóstrofo (ex: ’%1$s) "
-"ou em um intervalo de data (ex: 2021-%2$s)."
+"A abreviação de dois dígitos é comumente usada após um apóstrofo (ex: ’%1$s) ou em "
+"um intervalo de data (ex: 2021-%2$s)."
 
 #: build/index.js:80 build/index.js:76
 msgid "Text Before Date"
@@ -68,11 +67,11 @@ msgstr "Texto antes da data"
 
 #: build/index.js:82 build/index.js:78
 msgid ""
-"Enable to prepend any custom text. Default: “© Copyright”. Toggling resets "
-"to default."
+"Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to "
+"default."
 msgstr ""
-"Habilite para adicionar texto personalizado antes. Padrão: “© Copyright”. "
-"Alternar redefinirá para o padrão."
+"Habilite para adicionar texto personalizado antes. Padrão: “© Copyright”. Alternar "
+"redefinirá para o padrão."
 
 #: build/index.js:87
 msgid "Site Name After Date"
@@ -88,11 +87,11 @@ msgstr "Texto após a data"
 
 #: build/index.js:96 build/index.js:100
 msgid ""
-"Enable to append custom text. Default: “All rights reserved”. Toggling "
-"resets to default."
+"Enable to append custom text. Default: “All rights reserved”. Toggling resets to "
+"default."
 msgstr ""
-"Habilite para adicionar texto personalizado depois. Padrão: “Todos os "
-"direitos reservados”. Alternar redefinirá para o padrão."
+"Habilite para adicionar texto personalizado depois. Padrão: “Todos os direitos "
+"reservados”. Alternar redefinirá para o padrão."
 
 #: build/index.js:129 build/index.js:142 build/index.js:146 build/index.js:167
 msgid "Enter text"

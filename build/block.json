@@ -7,80 +7,80 @@
   "category": "text",
   "icon": "calendar",
   "keywords": [
-    "year",
-    "dynamic",
-    "date",
-    "block",
-    "footer",
-    "copyright"
+	"year",
+	"dynamic",
+	"date",
+	"block",
+	"footer",
+	"copyright"
   ],
-  "description": "A block that always displays the current year.",
+  "description": "A block that always displays the current year in your copyright footer notice.",
   "textdomain": "dynamic-year-block",
   "attributes": {
-    "format": {
-      "type": "string",
-      "default": "Y"
-    },
-    "beforeElement": {
-      "type": "string",
-      "default": ""
-    },
-    "afterElement": {
-      "type": "string",
-      "default": ""
-    },
-    "alignment": {
-      "type": "string",
-      "default": "none"
-    },
-    "displaySiteName": {
-      "type": "boolean",
-      "default": false
-    }
+	"format": {
+	  "type": "string",
+	  "default": "Y"
+	},
+	"beforeElement": {
+	  "type": "string",
+	  "default": ""
+	},
+	"afterElement": {
+	  "type": "string",
+	  "default": ""
+	},
+	"alignment": {
+	  "type": "string",
+	  "default": "none"
+	},
+	"displaySiteName": {
+	  "type": "boolean",
+	  "default": false
+	}
   },
   "usesContext": [
-    "backgroundColor",
-    "foregroundColor"
+	"backgroundColor",
+	"foregroundColor"
   ],
   "supports": {
-    "anchor": true,
-    "html": false,
-    "className": true,
-    "__experimentalBorder": {
-      "color": true,
-      "radius": true,
-      "style": true,
-      "width": true
-    },
-    "spacing": {
-      "padding": true,
-      "margin": true
-    },
-    "dimensions": {
-      "minHeight": true
-    },
-    "color": {
-      "gradients": true,
-      "link": true,
-      "__experimentalDefaultControls": {
-        "background": true,
-        "text": true,
-        "link": true
-      }
-    },
-    "typography": {
-      "fontSize": true,
-      "lineHeight": true,
-      "__experimentalFontFamily": true,
-      "__experimentalFontWeight": true,
-      "__experimentalFontStyle": true,
-      "__experimentalTextTransform": true,
-      "__experimentalTextDecoration": true,
-      "__experimentalLetterSpacing": true,
-      "__experimentalDefaultControls": {
-        "fontSize": true
-      }
-    }
+	"anchor": true,
+	"html": false,
+	"className": true,
+	"__experimentalBorder": {
+	  "color": true,
+	  "radius": true,
+	  "style": true,
+	  "width": true
+	},
+	"spacing": {
+	  "padding": true,
+	  "margin": true
+	},
+	"dimensions": {
+	  "minHeight": true
+	},
+	"color": {
+	  "gradients": true,
+	  "link": true,
+	  "__experimentalDefaultControls": {
+		"background": true,
+		"text": true,
+		"link": true
+	  }
+	},
+	"typography": {
+	  "fontSize": true,
+	  "lineHeight": true,
+	  "__experimentalFontFamily": true,
+	  "__experimentalFontWeight": true,
+	  "__experimentalFontStyle": true,
+	  "__experimentalTextTransform": true,
+	  "__experimentalTextDecoration": true,
+	  "__experimentalLetterSpacing": true,
+	  "__experimentalDefaultControls": {
+		"fontSize": true
+	  }
+	}
   },
   "editorScript": "file:./index.js"
 }
