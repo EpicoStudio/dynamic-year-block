@@ -21,6 +21,7 @@ You can open [this WordPress Playground site](https://playground.wordpress.net/?
 
 ⚠️ **Important**: please configure your timezone in “Settings → General → Timezone” in your WordPress dashboard, so that the year displayed by the block matches your server time and the timezone set in WordPress.
 
+This is a community plugin that can always be downloaded for free without any paid subscription from [the official WordPress repository](https://wordpress.org/plugins/dynamic-year-block/).
 
 == Installation ==
 
