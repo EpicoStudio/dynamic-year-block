@@ -1,0 +1,125 @@
+# Copyright (C) 2023 Márcio Duarte
+# This file is distributed under the GPL v2 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dynamic Year Block 0.6.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dynamic-year-block\n"
+"POT-Creation-Date: 2023-10-19 19:41-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4\n"
+"X-Domain: dynamic-year-block\n"
+
+#. Plugin Name of the plugin
+msgid "Dynamic Year Block"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/EpicoStudio/dynamic-year-block"
+msgstr ""
+
+#. Description of the plugin
+msgid "A block that always displays the current year in your copyright footer notice."
+msgstr ""
+
+#. Author of the plugin
+msgid "Márcio Duarte"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://epico.studio"
+msgstr ""
+
+#: build/index.js:62 build/index.js:45
+msgid "Settings"
+msgstr ""
+
+#: build/index.js:65 build/index.js:48
+msgid "Year format:"
+msgstr ""
+
+#: build/index.js:68 build/index.js:52
+msgid "Four digits"
+msgstr ""
+
+#: build/index.js:71 build/index.js:56
+msgid "Two digits"
+msgstr ""
+
+#. translators: %1s and %2s are the two-digit current year. See http://php.net/date.
+#: build/index.js:75 build/index.js:62
+msgid "The two-digit abbreviation is often used after an apostrophe (e.g., ’%1$s) or in a date range (e.g., 2021-%2$s)."
+msgstr ""
+
+#: build/index.js:80 build/index.js:76
+msgid "Text Before Date"
+msgstr ""
+
+#: build/index.js:82 build/index.js:78
+msgid "Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to default."
+msgstr ""
+
+#: build/index.js:87
+msgid "Site Name After Date"
+msgstr ""
+
+#: build/index.js:89
+msgid "Display the site name after the current year, linked to the homepage."
+msgstr ""
+
+#: build/index.js:94 build/index.js:98
+msgid "Text After Date"
+msgstr ""
+
+#: build/index.js:96 build/index.js:100
+msgid "Enable to append custom text. Default: “All rights reserved”. Toggling resets to default."
+msgstr ""
+
+#: build/index.js:129 build/index.js:146 build/index.js:170
+msgid "Enter text"
+msgstr ""
+
+#: build/block.json
+msgctxt "block title"
+msgid "Dynamic Year"
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "year"
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "dynamic"
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "date"
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "block"
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "footer"
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "copyright"
+msgstr ""
+
+#: build/block.json
+msgctxt "block description"
+msgid "A block that always displays the current year in your copyright footer notice."
+msgstr ""

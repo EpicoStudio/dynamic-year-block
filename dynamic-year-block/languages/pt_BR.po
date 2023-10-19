@@ -1,0 +1,154 @@
+# Copyright (C) 2023 Márcio Duarte
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Dynamic Year Block 0.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dynamic-year-block\n"
+"POT-Creation-Date: 2023-08-30T22:20:22+00:00\n"
+"PO-Revision-Date: 2023-10-19 19:41-0300\n"
+"Last-Translator: Márcio Duarte <contato@uberfacil.com>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4\n"
+"X-Domain: dynamic-year-block\n"
+
+#. Plugin Name of the plugin
+msgid "Dynamic Year Block"
+msgstr "Bloco de Ano Dinâmico"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/EpicoStudio/dynamic-year-block"
+msgstr "https://github.com/EpicoStudio/dynamic-year-block"
+
+#. Description of the plugin
+msgid "A block that always displays the current year in your copyright footer notice."
+msgstr "Um bloco que sempre exibe o ano atual no seu aviso de copyright no rodapé."
+
+#. Author of the plugin
+msgid "Márcio Duarte"
+msgstr "Márcio Duarte"
+
+#. Author URI of the plugin
+msgid "https://epico.studio"
+msgstr "https://epico.studio"
+
+#: build/index.js:62 build/index.js:45
+msgid "Settings"
+msgstr "Configurações"
+
+#: build/index.js:65 build/index.js:48
+msgid "Year format:"
+msgstr "Formato do ano:"
+
+#: build/index.js:68 build/index.js:52
+msgid "Four digits"
+msgstr "Quatro dígitos"
+
+#: build/index.js:71 build/index.js:56
+msgid "Two digits"
+msgstr "Dois dígitos"
+
+#. translators: %1s and %2s are the two-digit current year. See http://php.net/date.
+#: build/index.js:75 build/index.js:62
+msgid ""
+"The two-digit abbreviation is often used after an apostrophe (e.g., ’%1$s) or in a "
+"date range (e.g., 2021-%2$s)."
+msgstr ""
+"A abreviação de dois dígitos é comumente usada após um apóstrofo (ex: ’%1$s) ou em "
+"um intervalo de data (ex: 2021-%2$s)."
+
+#: build/index.js:80 build/index.js:76
+msgid "Text Before Date"
+msgstr "Texto antes da data"
+
+#: build/index.js:82 build/index.js:78
+msgid ""
+"Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to "
+"default."
+msgstr ""
+"Habilite para adicionar texto personalizado antes. Padrão: “© Copyright”. Alternar "
+"redefinirá para o padrão."
+
+#: build/index.js:87
+msgid "Site Name After Date"
+msgstr "Nome do site após a data"
+
+#: build/index.js:89
+msgid "Display the site name after the current year, linked to the homepage."
+msgstr "Exiba o nome do site após o ano atual, vinculado à página inicial."
+
+#: build/index.js:94 build/index.js:98
+msgid "Text After Date"
+msgstr "Texto após a data"
+
+#: build/index.js:96 build/index.js:100
+msgid ""
+"Enable to append custom text. Default: “All rights reserved”. Toggling resets to "
+"default."
+msgstr ""
+"Habilite para adicionar texto personalizado depois. Padrão: “Todos os direitos "
+"reservados”. Alternar redefinirá para o padrão."
+
+#: build/index.js:129 build/index.js:142 build/index.js:146 build/index.js:167
+msgid "Enter text"
+msgstr "Inserir texto"
+
+#: build/block.json
+msgctxt "block title"
+msgid "Dynamic Year"
+msgstr "Ano dinâmico"
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "year"
+msgstr "ano"
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "dynamic"
+msgstr "dinâmico"
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "date"
+msgstr "data"
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "block"
+msgstr "bloco"
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "footer"
+msgstr "rodapé"
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "copyright"
+msgstr "copyright"
+
+#: build/block.json
+msgctxt "block description"
+msgid "A block that always displays the current year."
+msgstr "Um bloco que sempre exibe o ano atual."
+
+#~ msgid "Add text before the current year."
+#~ msgstr "Adicione texto antes do ano atual."
+
+#~ msgid "Add text after the current year."
+#~ msgstr "Adicione texto após o ano atual."
+
+#~ msgid "Before Element"
+#~ msgstr "Texto antes da data"
+
+#~ msgid "After Element"
+#~ msgstr "Texto após a data"
+
+#~ msgctxt "block keyword"
+#~ msgid "blocks"
+#~ msgstr "blocos"
