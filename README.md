@@ -1,4 +1,4 @@
-![banner-1544x500](https://user-images.githubusercontent.com/1451087/206263238-891dae2c-8b20-4de4-8c71-346ed6a6e2f3.jpg)
+![banner-1544x500-2024](https://github.com/EpicoStudio/dynamic-year-block/assets/1451087/617b9b26-e8db-43a4-8237-14b1d28cfa2f)
 
 # Dynamic Year Block
 
