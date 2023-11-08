@@ -13,6 +13,8 @@ A block that always displays the current year in your footer copyright notice.
 
 == Description ==
 
+🆕 **New features**: now you can add your homepage link, copyright symbol and additional text with a single click.
+
 The **Dynamic Year Block** will automatically update the copyright year in your website footer. At the turn of each year, the number will automatically change to reflect the current year, freeing you from manually editing the year every new year's eve.
 
 The plugin works for both classic and block themes, but it is especially useful in the context of the **Site Editor**, where you can visually change the footer template part without messing with code. Just insert the Dynamic Year Block, enter your copyright notice and you're done. 💪
