@@ -5,7 +5,7 @@
  * Description:       A block that always displays the current year in your copyright footer notice.
  * Version:           0.6.4
  * Requires at least: 5.9
- * Requires PHP:      7.0
+ * Requires PHP:      7.4
  * Author:            Márcio Duarte
  * Author URI:        https://epico.studio
  * License:           GPL v2 or later

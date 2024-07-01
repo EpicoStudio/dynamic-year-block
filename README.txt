@@ -92,14 +92,14 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 = 0.6.4 =
 * Security and reliability enhancements.
 * Refactored the option that inserts the text after the current year to default to the privacy policy link.
-* Updated the code for WordPress version 6.6
+* Updated the code for WordPress version 6.6.
 
 = 0.6.3 =
-* Updated the code for WordPress version 6.5
+* Updated the code for WordPress version 6.5.
 
 = 0.6.2 =
 * Added support for block hooks.
-* Updated the code for WordPress version 6.4
+* Updated the code for WordPress version 6.4.
 
 = 0.6.1 =
 * Bug fix: the linked site title appears on the front-end as expected.
@@ -116,15 +116,15 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 = 0.4.0 =
 * Added support for gradients and alignments.
-* Updated the code for WordPress version 6.3
+* Updated the code for WordPress version 6.3.
 
 = 0.3.0 =
 * Added missing translation strings.
-* Updated the code for WordPress version 6.2
+* Updated the code for WordPress version 6.2.
 
 = 0.2.0 =
 * Added missing translation strings.
-* Updated the code for WordPress version 6.1
+* Updated the code for WordPress version 6.1.
 
 = 0.1.0 =
 * Initial release
