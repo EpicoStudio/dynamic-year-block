@@ -3,7 +3,7 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year in your copyright footer notice.
- * Version:           0.6.3
+ * Version:           0.6.4
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            Márcio Duarte
@@ -38,19 +38,27 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		// Get the current year.
 		$current_date = current_datetime();
 		$format       = isset( $attributes['format'] ) ? $attributes['format'] : 'Y';
-		$dynamic_year = $current_date->format($format);
+		$dynamic_year = $current_date->format( $format );
 
 		// Get the optional text BEFORE the year.
 		$before      = $attributes['beforeElement'] !== null ? $attributes['beforeElement'] : '';
-		$beforeStart = !empty($attributes['beforeElement']) ? '<span class="dynamic-year-before">' : '';
-		$beforeEnd   = !empty($attributes['beforeElement']) ? '</span>' : '';
+		$beforeStart = ! empty( $attributes['beforeElement'] ) ? '<span class="dynamic-year-before">' : '';
+		$beforeEnd   = ! empty( $attributes['beforeElement'] ) ? '</span>' : '';
 
-		// Get the optional text AFTER the year.
-		$after      = $attributes['afterElement'] !== null ? $attributes['afterElement'] : '';
-		$afterStart = !empty($attributes['afterElement']) ? '<span class="dynamic-year-after">' : '';
-		$afterEnd   = !empty($attributes['afterElement']) ? '</span>' : '';
+		// Get the optional text AFTER the year. Check if the privacy policy link should be displayed instead of the user defined text.
+		$privacy_policy_link = get_the_privacy_policy_link();
+		$defaultText = "All rights reserved";
+		$after = ! empty( $attributes['afterElement'] ) && strcmp( $attributes['afterElement'], $defaultText ) !== 0 ? $attributes['afterElement'] : ( $privacy_policy_link ? $privacy_policy_link : '' );
 
-		// Define the aria-current attribute.
+		// Determine if the afterElement content should be wrapped.
+		$afterStart = ! empty( $attributes['afterElement'] ) && strcmp( $attributes['afterElement'], $defaultText ) !== 0 ? '<span class="dynamic-year-after">' : '';
+		$afterEnd   = ! empty( $attributes['afterElement'] ) && strcmp( $attributes['afterElement'], $defaultText ) !== 0 ? '</span>' : '';
+
+		// Determine if the `afterElement` content should be wrapped.
+		$afterStart = ! empty( $attributes['afterElement'] ) ? '<span class="dynamic-year-after">' : '';
+		$afterEnd   = ! empty( $attributes['afterElement'] ) ? '</span>' : '';
+
+		// Define the `aria-current` attribute.
 		$aria_current = '';
 		if ( is_front_page() ) :
 			$aria_current = ' aria-current="page"';
@@ -60,7 +68,7 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		endif;
 
 		// Check if the site title is included and define the markup.
-		$siteName   = ( $attributes['displaySiteName'] !== false ) ? ' <a target="_self" rel="home" href="' .  get_bloginfo( 'url', 'display' ) . '"' . $aria_current .  '>' . get_bloginfo( 'name', 'display' ) . '</a>' : '';
+		$siteName   = ( $attributes['displaySiteName'] !== false ) ? ' <a target="_self" rel="home" href="' . esc_url( get_bloginfo( 'url', 'display' ) ) . '"' . $aria_current .  '>' . esc_html( get_bloginfo( 'name', 'display' ) ) . '</a>' : '';
 
 		// Markup.
 		$markup  = '<div ' . $wrapper_attributes . '>';
@@ -101,8 +109,8 @@ if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
 
 		// Add variables for usage on the block editor.
 		wp_add_inline_script( 'epico-dynamic-year-block-editor-script', 'const dynamicYearBlockData = ' . json_encode( array(
-			'siteTitle' => get_bloginfo( 'name' ),
-			'siteUrl' => get_bloginfo( 'url' ),
+			'siteTitle' => esc_html( get_bloginfo( 'name' ) ),
+			'siteUrl' => esc_url( get_bloginfo( 'url' ) ),
 		) ), 'before' );
 
 		// Load available translations ($path is not needed here, as this is hosted on WordPress.org).

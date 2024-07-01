@@ -11,11 +11,7 @@ import {
 	BlockControls
 } from '@wordpress/block-editor';
 
-import { PanelBody,
-	RadioControl,
-	TextControl,
-	ToggleControl
-} from '@wordpress/components';
+import { PanelBody, RadioControl, ToggleControl } from '@wordpress/components';
 
 import { __, sprintf } from '@wordpress/i18n';
 
@@ -39,6 +35,9 @@ export default function Edit( {
 	// Block properties.
 	const blockProps = useBlockProps();
 
+	// Safety check for format
+	const safeFormat = format || 'Y';
+
 	// Define the inspector controls.
 	const inspectorControls = (
 		<InspectorControls>
@@ -46,7 +45,7 @@ export default function Edit( {
 				<RadioControl
 					className={ 'dynamic-year-block' }
 					label={ __( 'Year format:', 'dynamic-year-block' ) }
-					selected={ format }
+					selected={ safeFormat }
 					options={ [
 						{
 							label: __( 'Four digits', 'dynamic-year-block' ),
@@ -110,7 +109,7 @@ export default function Edit( {
 	);
 
 	// Get the current year.
-	const currentYear = wp.date.dateI18n( format );
+	const currentYear = wp.date.dateI18n( safeFormat );
 
 	// Add a small margin to the help text.
 	const editorInlineStyle = `

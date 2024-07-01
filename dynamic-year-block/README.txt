@@ -4,7 +4,7 @@ Tags:              year, date, dynamic, copyright, footer
 Tested up to:      6.5
 Requires at least: 5.9
 Requires PHP:      7.0
-Stable tag:        0.6.3
+Stable tag:        0.6.4
 License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
@@ -88,6 +88,10 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 
 == Changelog ==
+
+= 0.6.4 =
+* Security Enhancements.
+* Refactored the option that inserts the text after the current year to default to the privacy policy link.
 
 = 0.6.3 =
 * Updated the code for WordPress version 6.5
