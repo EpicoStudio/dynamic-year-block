@@ -1,10 +1,10 @@
 === Dynamic Year Block – display a copyright notice in your footer with the current year ===
 Contributors:      pagelab, epicostudio
 Tags:              year, date, dynamic, copyright, footer
-Tested up to:      6.6
+Tested up to:      6.7
 Requires at least: 5.9
 Requires PHP:      7.4
-Stable tag:        0.6.4
+Stable tag:        0.6.5
 License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
@@ -13,7 +13,7 @@ A block that always displays the current year in your footer copyright notice.
 
 == Description ==
 
-🆕 **New features**: now you can add your homepage link, copyright symbol and additional text with a single click.
+🆕 **New features**: now you can add a background image with a couple of clicks.
 
 The **Dynamic Year Block** will automatically update the copyright year in your website footer. At the turn of each year, the number will automatically change to reflect the current year, freeing you from manually editing the year every new year's eve.
 
@@ -88,6 +88,11 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 
 == Changelog ==
+
+= 0.6.4 =
+* Added support for a background image.
+* Removed support for the anchor (it's not supported for dynamic blocks yet).
+* Updated the code for WordPress version 6.7.
 
 = 0.6.4 =
 * Security and reliability enhancements.

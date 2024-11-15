@@ -1,7 +1,7 @@
 {
 	"name": "dynamic-year-block",
-	"version": "0.6.4",
-	"description": "Adds the currenty year.",
+	"version": "0.6.5",
+	"description": "Display a copyright notice in your footer with the current year.",
 	"author": "Marcio Duarte",
 	"license": "GPL-2.0-or-later",
 	"homepage": "https://epico.studio",
@@ -18,6 +18,6 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^27.9.0"
+		"@wordpress/scripts": "^30.4.0"
 	}
 }

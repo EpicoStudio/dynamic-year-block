@@ -26,7 +26,7 @@ import { __, sprintf } from '@wordpress/i18n';
  * @return {JSX.Element} React element.
  */
 export default function Edit( {
-	attributes: { format, beforeElement, afterElement, alignment, displaySiteName }, // The default value is saved on block.json.
+	attributes: { format, beforeElement, afterElement, alignment, displaySiteName, privacyPolicy }, // The default value is saved on block.json.
 	setAttributes,
 } ) {
 	// Define the two-digit year for the help text.
@@ -75,11 +75,11 @@ export default function Edit( {
 					label={ __( 'Text Before Date', 'dynamic-year-block' ) }
 					checked={ beforeElement !== '' }
 					help={ __(
-						'Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to default.',
+						'Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to the default.',
 						'dynamic-year-block'
 					) }
 					onChange={ (newBeforeElement) =>
-						setAttributes( { beforeElement: newBeforeElement ? ( beforeElement || __( '© Copyright' + '\u00A0', 'dynamic-year-block' )) : '' } )
+						setAttributes( { beforeElement: newBeforeElement ? ( beforeElement || __( '© Copyright', 'dynamic-year-block' ) + '\u00A0' ) : '' } )
 					}
 				/>
 				<ToggleControl
@@ -97,11 +97,23 @@ export default function Edit( {
 					label={ __( 'Text After Date', 'dynamic-year-block' ) }
 					checked={ afterElement !== '' }
 					help={ __(
-						'Enable to append custom text. Default: “All rights reserved”. Toggling resets to default.',
+						'Enable to append custom text. Default: “All rights reserved”. Toggling resets to the default.',
 						'dynamic-year-block'
 					) }
 					onChange={ (newAfterElement) =>
-						setAttributes( { afterElement: newAfterElement ? ( afterElement || __( '\u00A0' + 'All rights reserved', 'dynamic-year-block' )) : '' } )
+						setAttributes( { afterElement: newAfterElement ? ( afterElement || '\u00A0' + __( 'All rights reserved', 'dynamic-year-block' )) : '' } )
+					}
+				/>
+
+				<ToggleControl
+					label={ __( 'Privacy Policy Link After Date', 'dynamic-year-block' ) }
+					checked={ privacyPolicy !== '' }
+					help={ __(
+						'Enable to append a link to your site’s privacy policy, which you can define under “Settings → Privacy”. Toggling resets to the default.',
+						'dynamic-year-block'
+					) }
+					onChange={ ( newPrivacyPolicy ) =>
+						setAttributes( { privacyPolicy: newPrivacyPolicy ? ( privacyPolicy || __( 'Privacy Policy', 'dynamic-year-block' )) : '' } )
 					}
 				/>
 			</PanelBody>
@@ -162,6 +174,7 @@ export default function Edit( {
 							</a>
 						</>
 					) : null}
+
 					<RichText
 						tagName="span"
 						className="dynamic-year-after"
@@ -172,6 +185,23 @@ export default function Edit( {
 							setAttributes( { afterElement: newAfterElement } )
 						}
 					/>
+					<>
+						{' '}
+						<RichText
+							tagName="a"
+							className="dynamic-year-privacy-policy"
+							allowedFormats={['core/bold', 'core/italic']}
+							placeholder={ privacyPolicy !== '' ? __( 'Enter text', 'dynamic-year-block' ) : '' }
+							value={ privacyPolicy }
+							onChange={ ( newPrivacyPolicy ) =>
+								setAttributes( { privacyPolicy: newPrivacyPolicy } )
+							}
+							href="#"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={ __('Privacy Policy', 'dynamic-year-block') }
+						/>
+					</>
 				</p>
 			</div>
 		</>

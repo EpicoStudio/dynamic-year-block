@@ -3,7 +3,7 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year in your copyright footer notice.
- * Version:           0.6.4
+ * Version:           0.6.5
  * Requires at least: 5.9
  * Requires PHP:      7.4
  * Author:            Márcio Duarte
@@ -28,7 +28,6 @@ defined( 'ABSPATH' ) || exit;
  */
 if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 	function epico_render_block_dynamic_year_block( $attributes, $content, $block ) {
-
 		// Block wrapper classes and styles.
 		$wrapper_attributes = get_block_wrapper_attributes();
 
@@ -46,13 +45,16 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		$beforeEnd   = ! empty( $attributes['beforeElement'] ) ? '</span>' : '';
 
 		// Get the optional text AFTER the year. Check if the privacy policy link should be displayed instead of the user defined text.
-		$privacy_policy_link = get_the_privacy_policy_link();
-		$defaultText = "All rights reserved";
-		$after = ! empty( $attributes['afterElement'] ) && strcmp( $attributes['afterElement'], $defaultText ) !== 0 ? $attributes['afterElement'] : ( $privacy_policy_link ? $privacy_policy_link : '' );
+		$after = ! empty( $attributes['afterElement'] ) ? $attributes['afterElement'] : '';
 
-		// Determine if the afterElement content should be wrapped.
-		$afterStart = ! empty( $attributes['afterElement'] ) && strcmp( $attributes['afterElement'], $defaultText ) !== 0 ? '<span class="dynamic-year-after">' : '';
-		$afterEnd   = ! empty( $attributes['afterElement'] ) && strcmp( $attributes['afterElement'], $defaultText ) !== 0 ? '</span>' : '';
+		// Define the text and the link of the privacy policy page.
+		$privacyPolicyText  = ! empty( $attributes['privacyPolicy'] ) ? $attributes['privacyPolicy'] : '';
+		$privacyPolicyLink  = get_privacy_policy_url();
+
+		// Determine if the privacy policy link should be displayed
+		if ( $privacyPolicyLink ) {
+			$after .= ' <a href="' . esc_url( $privacyPolicyLink ) . '" target="_blank" aria-label="' . esc_attr__( 'Privacy Policy', 'dynamic-year-block' ) .'" rel="noopener noreferrer">' . esc_html( $privacyPolicyText ) . '</a>';
+		}
 
 		// Determine if the `afterElement` content should be wrapped.
 		$afterStart = ! empty( $attributes['afterElement'] ) ? '<span class="dynamic-year-after">' : '';
@@ -63,7 +65,6 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		if ( is_front_page() ) :
 			$aria_current = ' aria-current="page"';
 		elseif ( is_home() && ( (int) get_option( 'page_for_posts' ) !== get_queried_object_id() ) ) :
-			// Edge case where the Reading settings has a posts page set but not a static homepage.
 			$aria_current = ' aria-current="page"';
 		endif;
 
@@ -73,16 +74,17 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		// Markup.
 		$markup  = '<div ' . $wrapper_attributes . '>';
 		$markup .= '<p class="dynamic-year-' . esc_attr( $dynamic_year ) . esc_attr( $alignClass ) . '">';
-		$markup .= $beforeStart . force_balance_tags( wp_kses_post( $before ) ) . $beforeEnd;
+		$markup .= $beforeStart . wp_kses_post( force_balance_tags( $before ) ) . $beforeEnd;
 		$markup .= esc_attr( $dynamic_year );
 		$markup .= $siteName;
-		$markup .= $afterStart . force_balance_tags( wp_kses_post( $after ) ) . $afterEnd;
+		$markup .= $afterStart . wp_kses_post( force_balance_tags( $after ) ) . $afterEnd;
 		$markup .= '</p>';
 		$markup .= '</div>';
 
 		return $markup;
 	}
 }
+
 
 
 /**
@@ -108,7 +110,7 @@ if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
 		);
 
 		// Add variables for usage on the block editor.
-		wp_add_inline_script( 'epico-dynamic-year-block-editor-script', 'const dynamicYearBlockData = ' . json_encode( array(
+		wp_add_inline_script( 'epico-dynamic-year-block-editor-script', 'const dynamicYearBlockData = ' . wp_json_encode( array(
 			'siteTitle' => esc_html( get_bloginfo( 'name' ) ),
 			'siteUrl' => esc_url( get_bloginfo( 'url' ) ),
 		) ), 'before' );

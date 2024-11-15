@@ -1,96 +1,111 @@
-# Copyright (C) 2023 Márcio Duarte
+# Copyright (C) 2024 Márcio Duarte
 # This file is distributed under the GPL v2 or later.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Dynamic Year Block 0.6.1\n"
+"Project-Id-Version: Dynamic Year Block 0.6.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dynamic-year-block\n"
+"POT-Creation-Date: 2024-11-14 22:32-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-08-31T14:57:46+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Domain: dynamic-year-block\n"
 
 #. Plugin Name of the plugin
+#: dynamic-year-block.php
 msgid "Dynamic Year Block"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: dynamic-year-block.php
 msgid "https://github.com/EpicoStudio/dynamic-year-block"
 msgstr ""
 
 #. Description of the plugin
+#: dynamic-year-block.php
 msgid "A block that always displays the current year in your copyright footer notice."
 msgstr ""
 
 #. Author of the plugin
+#: dynamic-year-block.php
 msgid "Márcio Duarte"
 msgstr ""
 
 #. Author URI of the plugin
+#: dynamic-year-block.php
 msgid "https://epico.studio"
 msgstr ""
 
-#: build/index.js:62
-#: build/index.js:45
+#: dynamic-year-block.php:56 build/index.js:2
+msgid "Privacy Policy"
+msgstr ""
+
+#: build/index.js:1
 msgid "Settings"
 msgstr ""
 
-#: build/index.js:65
-#: build/index.js:48
+#: build/index.js:1
 msgid "Year format:"
 msgstr ""
 
-#: build/index.js:68
-#: build/index.js:52
+#: build/index.js:1
 msgid "Four digits"
 msgstr ""
 
-#: build/index.js:71
-#: build/index.js:56
+#: build/index.js:1
 msgid "Two digits"
 msgstr ""
 
 #. translators: %1s and %2s are the two-digit current year. See http://php.net/date.
-#: build/index.js:75
-#: build/index.js:62
+#: build/index.js:2
 msgid "The two-digit abbreviation is often used after an apostrophe (e.g., ’%1$s) or in a date range (e.g., 2021-%2$s)."
 msgstr ""
 
-#: build/index.js:80
-#: build/index.js:76
+#: build/index.js:2
 msgid "Text Before Date"
 msgstr ""
 
-#: build/index.js:82
-#: build/index.js:78
-msgid "Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to default."
+#: build/index.js:2
+msgid "Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to the default."
 msgstr ""
 
-#: build/index.js:87
+#: build/index.js:2
+msgid "© Copyright"
+msgstr ""
+
+#: build/index.js:2
 msgid "Site Name After Date"
 msgstr ""
 
-#: build/index.js:89
+#: build/index.js:2
 msgid "Display the site name after the current year, linked to the homepage."
 msgstr ""
 
-#: build/index.js:94
-#: build/index.js:98
+#: build/index.js:2
 msgid "Text After Date"
 msgstr ""
 
-#: build/index.js:96
-#: build/index.js:100
-msgid "Enable to append custom text. Default: “All rights reserved”. Toggling resets to default."
+#: build/index.js:2
+msgid "Enable to append custom text. Default: “All rights reserved”. Toggling resets to the default."
 msgstr ""
 
-#: build/index.js:129
-#: build/index.js:146
-#: build/index.js:170
+#: build/index.js:2
+msgid "All rights reserved"
+msgstr ""
+
+#: build/index.js:2
+msgid "Privacy Policy Link After Date"
+msgstr ""
+
+#: build/index.js:2
+msgid "Enable to append a link to your site’s privacy policy, which you can define under “Settings → Privacy”. Toggling resets to the default."
+msgstr ""
+
+#: build/index.js:2
 msgid "Enter text"
 msgstr ""
 
@@ -131,5 +146,5 @@ msgstr ""
 
 #: build/block.json
 msgctxt "block description"
-msgid "A block that always displays the current year in your copyright footer notice."
+msgid "A block that always displays the current year."
 msgstr ""
