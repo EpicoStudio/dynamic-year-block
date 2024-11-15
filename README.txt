@@ -13,7 +13,7 @@ A block that always displays the current year in your footer copyright notice.
 
 == Description ==
 
-🆕 **New features**: now you can add a background image with a couple of clicks.
+🆕 **New features**: now you can add a background image and the link to your Privacy Policy page with a couple of clicks.
 
 The **Dynamic Year Block** will automatically update the copyright year in your website footer. At the turn of each year, the number will automatically change to reflect the current year, freeing you from manually editing the year every new year's eve.
 
@@ -89,10 +89,12 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 == Changelog ==
 
-= 0.6.4 =
+= 0.6.5 =
 * Added support for a background image.
+* Added a toggle in the UI to include the link for the Privacy Policy page.
 * Removed support for the anchor (it's not supported for dynamic blocks yet).
 * Updated the code for WordPress version 6.7.
+* Complete review of the code using the official Plugin Check plugin.
 
 = 0.6.4 =
 * Security and reliability enhancements.
