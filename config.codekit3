@@ -14,7 +14,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/.editorconfig",
+      "oAP" : "\/build\/.editorconfig",
       "oF" : 0
     },
     "\/.gitattributes" : {
@@ -22,7 +22,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/.gitattributes",
+      "oAP" : "\/build\/.gitattributes",
       "oF" : 0
     },
     "\/.gitignore" : {
@@ -30,14 +30,14 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/.gitignore",
+      "oAP" : "\/build\/.gitignore",
       "oF" : 0
     },
     "\/assets\/screenshot-1.gif" : {
       "ft" : 4194304,
       "iS" : 66705,
       "oA" : 0,
-      "oAP" : "\/assets\/screenshot-1.gif",
+      "oAP" : "\/build\/assets\/screenshot-1.gif",
       "oF" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-none",
@@ -47,7 +47,7 @@
       "ft" : 4194304,
       "iS" : 181595,
       "oA" : 0,
-      "oAP" : "\/assets\/screenshot-2.gif",
+      "oAP" : "\/build\/assets\/screenshot-2.gif",
       "oF" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-none",
@@ -56,7 +56,7 @@
     "\/build\/block.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/build\/block-min.json",
+      "oAP" : "\/build\/build\/block-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -66,7 +66,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/index.asset.php",
+      "oAP" : "\/build\/build\/index.asset.php",
       "oF" : 0
     },
     "\/build\/index.js" : {
@@ -75,7 +75,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/build\/index-min.js",
+      "oAP" : "\/build\/build\/index-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -85,13 +85,13 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block.php",
+      "oAP" : "\/build\/dynamic-year-block.php",
       "oF" : 0
     },
     "\/dynamic-year-block\/build\/block.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/dynamic-year-block\/build\/block-min.json",
+      "oAP" : "\/build\/dynamic-year-block\/build\/block-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -101,7 +101,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block\/build\/index.asset.php",
+      "oAP" : "\/build\/dynamic-year-block\/build\/index.asset.php",
       "oF" : 0
     },
     "\/dynamic-year-block\/build\/index.js" : {
@@ -110,7 +110,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block\/build\/index-min.js",
+      "oAP" : "\/build\/dynamic-year-block\/build\/index-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -120,7 +120,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block\/dynamic-year-block.php",
+      "oAP" : "\/build\/dynamic-year-block\/dynamic-year-block.php",
       "oF" : 0
     },
     "\/dynamic-year-block\/languages\/dynamic-year-block.pot" : {
@@ -128,7 +128,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block\/languages\/dynamic-year-block.pot",
+      "oAP" : "\/build\/dynamic-year-block\/languages\/dynamic-year-block.pot",
       "oF" : 0
     },
     "\/dynamic-year-block\/languages\/pt_BR.mo" : {
@@ -136,7 +136,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block\/languages\/pt_BR.mo",
+      "oAP" : "\/build\/dynamic-year-block\/languages\/pt_BR.mo",
       "oF" : 0
     },
     "\/dynamic-year-block\/languages\/pt_BR.po" : {
@@ -144,7 +144,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block\/languages\/pt_BR.po",
+      "oAP" : "\/build\/dynamic-year-block\/languages\/pt_BR.po",
       "oF" : 0
     },
     "\/dynamic-year-block\/README.md" : {
@@ -157,7 +157,7 @@
       "ft" : 4096,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block\/README.html",
+      "oAP" : "\/build\/dynamic-year-block\/README.html",
       "oF" : 0,
       "oFM" : 0,
       "oS" : 0,
@@ -171,7 +171,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dynamic-year-block\/README.txt",
+      "oAP" : "\/build\/dynamic-year-block\/README.txt",
       "oF" : 0
     },
     "\/languages\/dynamic-year-block.pot" : {
@@ -179,7 +179,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/languages\/dynamic-year-block.pot",
+      "oAP" : "\/build\/languages\/dynamic-year-block.pot",
       "oF" : 0
     },
     "\/languages\/pt_BR.mo" : {
@@ -187,7 +187,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/languages\/pt_BR.mo",
+      "oAP" : "\/build\/languages\/pt_BR.mo",
       "oF" : 0
     },
     "\/languages\/pt_BR.po" : {
@@ -195,7 +195,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/languages\/pt_BR.po",
+      "oAP" : "\/build\/languages\/pt_BR.po",
       "oF" : 0
     },
     "\/LICENSE" : {
@@ -203,19 +203,19 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/LICENSE",
+      "oAP" : "\/build\/LICENSE",
       "oF" : 0
     },
     "\/node_modules" : {
       "ft" : 65536,
       "oA" : 2,
-      "oAP" : "\/node_modules",
+      "oAP" : "\/build\/node_modules",
       "oF" : 0
     },
     "\/package-lock.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/package-lock-min.json",
+      "oAP" : "\/build\/package-lock-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -223,7 +223,7 @@
     "\/package.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/package-min.json",
+      "oAP" : "\/build\/package-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -238,7 +238,7 @@
       "ft" : 4096,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/README.html",
+      "oAP" : "\/build\/README.html",
       "oF" : 0,
       "oFM" : 0,
       "oS" : 0,
@@ -252,13 +252,13 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/README.txt",
+      "oAP" : "\/build\/README.txt",
       "oF" : 0
     },
     "\/src\/block.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/src\/block-min.json",
+      "oAP" : "\/build\/block-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -269,7 +269,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/src\/edit-min.js",
+      "oAP" : "\/build\/edit-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -280,7 +280,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/src\/index-min.js",
+      "oAP" : "\/build\/index-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -592,7 +592,7 @@
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
     "buildEnvironment" : 0,
-    "buildFolderActive" : 0,
+    "buildFolderActive" : 1,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
     "cssoForceMediaMerge" : 0,
@@ -1862,7 +1862,7 @@
     "rollupTreeshakingEnabled" : 1,
     "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
-    "sourceFolderName" : "source",
+    "sourceFolderName" : "src",
     "susyVersion" : 3,
     "tsAllowArbitraryExtensions" : 0,
     "tsAllowImportingTSExtensions" : 0,
@@ -2190,7 +2190,7 @@
     "webpPresets" : {
 
     },
-    "websiteRelativeRoot" : ""
+    "websiteRelativeRoot" : "build"
   },
   "settingsFileVersion" : "3"
 }

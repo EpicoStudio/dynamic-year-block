@@ -199,7 +199,7 @@ export default function Edit( {
 							href="#"
 							target="_blank"
 							rel="noopener noreferrer"
-							aria-label={ __('Privacy Policy', 'dynamic-year-block') }
+							aria-label={ __( 'Privacy Policy', 'dynamic-year-block' ) }
 						/>
 					</>
 				</p>

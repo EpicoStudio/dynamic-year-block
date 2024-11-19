@@ -32,27 +32,27 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		$wrapper_attributes = get_block_wrapper_attributes();
 
 		// Get the alignment attribute for the paragraph.
-		$alignClass = isset( $attributes['alignment'] ) ? ' has-text-align-' . $attributes['alignment'] : '';
+		$alignClass = isset( $attributes['alignment'] ) ? ' has-text-align-' . sanitize_html_class( $attributes['alignment'] ) : '';
 
 		// Get the current year.
 		$current_date = current_datetime();
-		$format       = isset( $attributes['format'] ) ? $attributes['format'] : 'Y';
-		$dynamic_year = $current_date->format( $format );
+		$format       = isset( $attributes['format'] ) ? sanitize_text_field( $attributes['format'] ) : 'Y';
+		$dynamic_year = esc_html( $current_date->format( $format ) );
 
 		// Get the optional text BEFORE the year.
-		$before      = $attributes['beforeElement'] !== null ? $attributes['beforeElement'] : '';
+		$before      = $attributes['beforeElement'] !== null ? esc_html( $attributes['beforeElement'] ) : '';
 		$beforeStart = ! empty( $attributes['beforeElement'] ) ? '<span class="dynamic-year-before">' : '';
 		$beforeEnd   = ! empty( $attributes['beforeElement'] ) ? '</span>' : '';
 
 		// Get the optional text AFTER the year. Check if the privacy policy link should be displayed instead of the user defined text.
-		$after = ! empty( $attributes['afterElement'] ) ? $attributes['afterElement'] : '';
+		$after = ! empty( $attributes['afterElement'] ) ? esc_html( $attributes['afterElement'] ) : '';
 
 		// Define the text and the link of the privacy policy page.
-		$privacyPolicyText  = ! empty( $attributes['privacyPolicy'] ) ? $attributes['privacyPolicy'] : '';
+		$privacyPolicyText  = ! empty( $attributes['privacyPolicy'] ) ? esc_html( $attributes['privacyPolicy'] ) : '';
 		$privacyPolicyLink  = get_privacy_policy_url();
 
 		// Determine if the privacy policy link should be displayed
-		if ( $privacyPolicyLink ) {
+		if ( $privacyPolicyLink && ! empty( $privacyPolicyText ) ) {
 			$after .= ' <a href="' . esc_url( $privacyPolicyLink ) . '" target="_blank" aria-label="' . esc_attr__( 'Privacy Policy', 'dynamic-year-block' ) .'" rel="noopener noreferrer">' . esc_html( $privacyPolicyText ) . '</a>';
 		}
 
