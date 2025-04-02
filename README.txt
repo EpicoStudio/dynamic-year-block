@@ -92,7 +92,7 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 = 0.6.6 =
 * Updated the code for WordPress version 6.8.
 * Added support for wp_register_block_types_from_metadata_collection() to load the block more efficiently.
-* Refactor the PHP code for better maintanability and legibility.
+* Refactor the PHP code for better maintainability and legibility.
 
 = 0.6.5 =
 * Added support for a background image.
