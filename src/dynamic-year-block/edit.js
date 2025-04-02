@@ -81,6 +81,7 @@ export default function Edit( {
 					onChange={ (newBeforeElement) =>
 						setAttributes( { beforeElement: newBeforeElement ? ( beforeElement || __( '© Copyright', 'dynamic-year-block' ) + '\u00A0' ) : '' } )
 					}
+					__nextHasNoMarginBottom={ true }
 				/>
 				<ToggleControl
 					label={ __( 'Site Name After Date', 'dynamic-year-block' ) }
@@ -92,6 +93,7 @@ export default function Edit( {
 					onChange={ ( newDisplaySiteName ) =>
 						setAttributes( { displaySiteName: newDisplaySiteName } )
 					}
+					__nextHasNoMarginBottom={ true }
 				/>
 				<ToggleControl
 					label={ __( 'Text After Date', 'dynamic-year-block' ) }
@@ -103,6 +105,7 @@ export default function Edit( {
 					onChange={ (newAfterElement) =>
 						setAttributes( { afterElement: newAfterElement ? ( afterElement || '\u00A0' + __( 'All rights reserved', 'dynamic-year-block' )) : '' } )
 					}
+					__nextHasNoMarginBottom={ true }
 				/>
 
 				<ToggleControl
@@ -115,6 +118,7 @@ export default function Edit( {
 					onChange={ ( newPrivacyPolicy ) =>
 						setAttributes( { privacyPolicy: newPrivacyPolicy ? ( privacyPolicy || __( 'Privacy Policy', 'dynamic-year-block' )) : '' } )
 					}
+					__nextHasNoMarginBottom={ true }
 				/>
 			</PanelBody>
 		</InspectorControls>

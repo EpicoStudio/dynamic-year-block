@@ -3,7 +3,7 @@
  * Plugin Name:       Dynamic Year Block
  * Plugin URI:        https://github.com/EpicoStudio/dynamic-year-block
  * Description:       A block that always displays the current year in your copyright footer notice.
- * Version:           0.6.5
+ * Version:           0.6.6
  * Requires at least: 5.9
  * Requires PHP:      7.4
  * Author:            Márcio Duarte
@@ -16,6 +16,94 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+// This plugin's path.
+if ( ! defined( 'DYB_DIR' ) ) {
+	define( 'DYB_DIR', plugin_dir_path( __FILE__ ) );
+}
+
+# ----------  HOOK REGISTRATION  ----------
+
+
+// Registers the `epico/dynamic-year-block` block on the server.
+add_action( 'init', 'epico_register_block_dynamic_year_block' );
+
+// Hooks the Dynamic Year block in the Group block, in the footer context.
+add_filter( 'hooked_block_types', 'epico_block_hooks', 10, 4 );
+
+
+# ----------- HOOKED FUNCTIONS  -----------
+
+/**
+ * Registers the `epico/dynamic-year-block` block on the server.
+ *
+ * @link   https://developer.wordpress.org/reference/functions/register_block_type/
+ * @link   https://developer.wordpress.org/reference/functions/wp_register_block_metadata_collection/
+ * @return void
+ */
+if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
+	function epico_register_block_dynamic_year_block() {
+		if ( ! function_exists( 'register_block_type' ) ) :
+			// The block editor is not available.
+			return;
+		endif;
+
+		// Register the block metadata collection to improve performance.
+		if ( function_exists( 'wp_register_block_types_from_metadata_collection' ) ) {
+			wp_register_block_types_from_metadata_collection( DYB_DIR . '/build', DYB_DIR . '/build/blocks-manifest.php' );
+		} else {
+			if ( function_exists( 'wp_register_block_metadata_collection' ) ) {
+				wp_register_block_metadata_collection( DYB_DIR . '/build', DYB_DIR . '/build/blocks-manifest.php' );
+			}
+			$manifest_data = require DYB_DIR . '/build/blocks-manifest.php';
+			foreach ( array_keys( $manifest_data ) as $block_type ) {
+				register_block_type( DYB_DIR . "/build/{$block_type}",
+					array(
+						'api_version' => 3,
+						'render_callback' => 'epico_render_block_dynamic_year_block',
+					)
+				 );
+			}
+		}
+
+		// Add variables for usage on the block editor.
+		wp_add_inline_script( 'epico-dynamic-year-block-editor-script', 'const dynamicYearBlockData = ' . wp_json_encode( array(
+			'siteTitle' => esc_html( get_bloginfo( 'name' ) ),
+			'siteUrl' => esc_url( get_bloginfo( 'url' ) ),
+		) ), 'before' );
+
+		// Load available translations ($path is not needed here, as this is hosted on WordPress.org).
+		wp_set_script_translations( 'epico-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
+	}
+}
+
+/**
+ * Hooks the Dynamic Year block in the Group block, in the footer context.
+ *
+ * @link   https://developer.wordpress.org/reference/hooks/hooked_block_types/
+ * @since  0.6.2
+ * @return array
+ */
+function epico_block_hooks( $hooked_blocks, $position, $anchor_block, $context ) {
+
+	// Template/Template Part hooks.
+	if ( $context instanceof WP_Block_Template ) {
+
+		// Add the block after the site title on the footer, if present.
+		if (
+			'core/site-title' === $anchor_block &&
+			'after' === $position &&
+			'footer' === $context->area
+		) {
+			$hooked_blocks[] = 'epico/dynamic-year-block';
+		}
+	}
+
+	return $hooked_blocks;
+}
+
+
+# ----------- UNHOOKED FUNCTIONS  -----------
 
 /**
  * Renders the `dynamic-year-block` on the server.
@@ -84,65 +172,3 @@ if ( ! function_exists( 'epico_render_block_dynamic_year_block' ) ) {
 		return $markup;
 	}
 }
-
-
-
-/**
- * Registers the `epico/dynamic-year-block` block on the server.
- *
- * @link   https://developer.wordpress.org/reference/functions/register_block_type/
- * @return void
- */
-if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
-	function epico_register_block_dynamic_year_block() {
-		if ( ! function_exists( 'register_block_type' ) ) :
-			// The block editor is not available.
-			return;
-		endif;
-
-		// Register the block and specify the callback.
-		register_block_type(
-			__DIR__ . '/build',
-			array(
-				'api_version' => 3,
-				'render_callback' => 'epico_render_block_dynamic_year_block',
-			)
-		);
-
-		// Add variables for usage on the block editor.
-		wp_add_inline_script( 'epico-dynamic-year-block-editor-script', 'const dynamicYearBlockData = ' . wp_json_encode( array(
-			'siteTitle' => esc_html( get_bloginfo( 'name' ) ),
-			'siteUrl' => esc_url( get_bloginfo( 'url' ) ),
-		) ), 'before' );
-
-		// Load available translations ($path is not needed here, as this is hosted on WordPress.org).
-		wp_set_script_translations( 'epico-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
-	}
-}
-add_action( 'init', 'epico_register_block_dynamic_year_block' );
-
-/**
- * Hooks the Dynamic Year block in the Group block, in the footer context.
- *
- * @link   https://developer.wordpress.org/reference/hooks/hooked_block_types/
- * @since  0.6.2
- * @return array
- */
-function epico_block_hooks( $hooked_blocks, $position, $anchor_block, $context ) {
-
-	// Template/Template Part hooks.
-	if ( $context instanceof WP_Block_Template ) {
-
-		// Add the block after the site title on the footer, if present.
-		if (
-			'core/site-title' === $anchor_block &&
-			'after' === $position &&
-			'footer' === $context->area
-		) {
-			$hooked_blocks[] = 'epico/dynamic-year-block';
-		}
-	}
-
-	return $hooked_blocks;
-}
-add_filter( 'hooked_block_types', 'epico_block_hooks', 10, 4 );

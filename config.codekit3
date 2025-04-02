@@ -53,32 +53,11 @@
       "ou" : "lpckwebp-none",
       "rq" : 75
     },
-    "\/build\/block.json" : {
-      "ft" : 524288,
+    "\/build" : {
+      "ft" : 65536,
       "oA" : 1,
-      "oAP" : "\/build\/build\/block-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/build\/index.asset.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/build\/index.asset.php",
+      "oAP" : "\/build\/build",
       "oF" : 0
-    },
-    "\/build\/index.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/build\/build\/index-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
     },
     "\/dynamic-year-block.php" : {
       "cB" : 0,
@@ -88,32 +67,56 @@
       "oAP" : "\/build\/dynamic-year-block.php",
       "oF" : 0
     },
-    "\/dynamic-year-block\/build\/block.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/build\/dynamic-year-block\/build\/block-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/dynamic-year-block\/build\/index.asset.php" : {
+    "\/dynamic-year-block.zip" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/dynamic-year-block\/build\/index.asset.php",
+      "oAP" : "\/build\/dynamic-year-block.zip",
       "oF" : 0
     },
-    "\/dynamic-year-block\/build\/index.js" : {
+    "\/dynamic-year-block\/build\/blocks-manifest.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/dynamic-year-block\/build\/blocks-manifest.php",
+      "oF" : 0
+    },
+    "\/dynamic-year-block\/build\/dynamic-year-block\/block.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/build\/dynamic-year-block\/build\/dynamic-year-block\/block-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/dynamic-year-block\/build\/dynamic-year-block\/index.asset.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/dynamic-year-block\/build\/dynamic-year-block\/index.asset.php",
+      "oF" : 0
+    },
+    "\/dynamic-year-block\/build\/dynamic-year-block\/index.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/build\/dynamic-year-block\/build\/index-min.js",
+      "oAP" : "\/build\/dynamic-year-block\/build\/dynamic-year-block\/index-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/dynamic-year-block\/build\/languages\/dynamic-year-block.pot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/dynamic-year-block\/build\/languages\/dynamic-year-block.pot",
+      "oF" : 0
     },
     "\/dynamic-year-block\/dynamic-year-block.php" : {
       "cB" : 0,
@@ -255,32 +258,32 @@
       "oAP" : "\/build\/README.txt",
       "oF" : 0
     },
-    "\/src\/block.json" : {
+    "\/src\/dynamic-year-block\/block.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/build\/block-min.json",
+      "oAP" : "\/build\/dynamic-year-block\/block-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
     },
-    "\/src\/edit.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/build\/edit-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/index.js" : {
+    "\/src\/dynamic-year-block\/edit.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/build\/index-min.js",
+      "oAP" : "\/build\/dynamic-year-block\/edit-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/src\/dynamic-year-block\/index.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/build\/dynamic-year-block\/index-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0

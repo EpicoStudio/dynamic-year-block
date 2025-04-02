@@ -2,12 +2,12 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "epico/dynamic-year-block",
-	"version": "0.6.5",
+	"version": "0.6.6",
 	"title": "Dynamic Year",
 	"category": "text",
 	"icon": "calendar",
 	"keywords": [ "year", "dynamic", "date", "block", "footer", "copyright" ],
-	"description": "A block that always displays the current year.",
+	"description": "Display a copyright notice in your footer with the current year.",
 	"textdomain": "dynamic-year-block",
 	"attributes": {
 		"format": {

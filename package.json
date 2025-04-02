@@ -1,13 +1,12 @@
 {
 	"name": "dynamic-year-block",
-	"version": "0.6.5",
+	"version": "0.6.6",
 	"description": "Display a copyright notice in your footer with the current year.",
 	"author": "Marcio Duarte",
 	"license": "GPL-2.0-or-later",
 	"homepage": "https://epico.studio",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
@@ -15,9 +14,11 @@
 		"make-pot": "wp i18n make-pot . languages/awp.pot --slug=awp --domain=awp --exclude=node_modules,src",
 		"make-json": "wp i18n make-json languages/ --no-purge",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"build": "wp-scripts build --blocks-manifest",
+		"start": "wp-scripts start --blocks-manifest"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.4.0"
+		"@wordpress/browserslist-config": "^6.21.0",
+		"@wordpress/scripts": "^30.14.1"
 	}
 }
