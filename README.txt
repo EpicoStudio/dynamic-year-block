@@ -43,7 +43,7 @@ This is a community plugin that can always be downloaded for free without any pa
 == Frequently Asked Questions ==
 
 = Why would I need this? =
-This eliminates the need to manually edit the year of your website's copyright statement,  usually located at the bottom of each page.
+With this plugin, you can insert a complete copyright statement in your website's footer, including the current year, a link to your privacy policy page, and additional text that you can customize at will. The plugin is highly customizable and works perfectly with your theme's design.
 
 = What is the recommended way to use it? =
 It is recommended to insert it in the footer template part of your block theme, but it can be used anywhere in your content.
