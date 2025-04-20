@@ -5,9 +5,9 @@
 * Donate link: https://ubr.link/donate-wp
 * Tags: year, dynamic, date, copyright, footer, block
 * Tested up to: 6.8
-* Requires at least: 5.9
+* Requires at least: 6.6
 * Requires PHP: 7.4
-* Stable tag: 0.6.6
+* Stable tag: 0.6.7
 * License: GPL 2.0 or later
 
 Auto update the copyright year in your website footer dynamically. At the turn of each year, the number will automatically change to reflect the current year.
@@ -43,6 +43,9 @@ Absolutely not, the plugin respects your privacy. It's completely add-free and t
 
 ## Does this plugin work in the Classic Editor?
 No, this plugin works exclusively in the Block Editor.
+
+## The link to my privacy policy does not appear on the front end.
+ The block works only with the native Privacy Policy page. You can create one under “Settings → Privacy”, clicking the “Create button” on the “Settings” tab. Also, make sure your Privacy Policy page is published.
 
 ## Is the included copyright notice enough to safeguard my website regarding legal issues? =
 Most probably not. While the plugin offers a basic copyright notice, it doesn't automatically solve all legal issues your website may have, nor does it constitute legal advice in any way. The site owner is solely responsible for ensuring that the website respects the law.

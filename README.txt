@@ -2,9 +2,9 @@
 Contributors:      pagelab, epicostudio
 Tags:              year, date, dynamic, copyright, footer
 Tested up to:      6.8
-Requires at least: 5.9
+Requires at least: 6.6
 Requires PHP:      7.4
-Stable tag:        0.6.6
+Stable tag:        0.6.7
 License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
@@ -62,6 +62,9 @@ Absolutely not, the plugin respects your privacy. It's completely add-free and t
 = Does this plugin work in the Classic Editor? =
 No, this plugin works exclusively in the Block Editor.
 
+= The link to my privacy policy does not appear on the front end. =
+The block works only with the native Privacy Policy page. You can create one under “Settings → Privacy”, clicking the “Create button” on the “Settings” tab. Also, make sure your Privacy Policy page is published.
+
 = Does the plugin use the client time (via Javascript) or the server time (via PHP) to update the year? =
 The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time, using the timezone specified in the “Settings → General → Timezone” on your WordPress dashboard. So it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
 
@@ -88,6 +91,9 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 
 == Changelog ==
+
+= 0.6.7 =
+* Improved block registration.
 
 = 0.6.6 =
 * Updated the code for WordPress version 6.8.
