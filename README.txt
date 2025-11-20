@@ -94,6 +94,7 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 = 1.0.1 =
 * Security fix: ensure all block output is properly escaped using wp_kses_post().
+* Code quality: prefix variables in render.php to comply with WordPress coding standards.
 
 = 1.0.0 =
 * 🎉 Milestone: First stable release, after extensive testing and refinement.
