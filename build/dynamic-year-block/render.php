@@ -14,12 +14,12 @@ $format       = isset( $attributes['format'] ) ? sanitize_text_field( $attribute
 $dynamic_year = esc_html( $current_date->format( $format ) );
 
 // Get the optional text BEFORE the year.
-$before      = $attributes['beforeElement'] !== null ? esc_html( $attributes['beforeElement'] ) : '';
+$before      = $attributes['beforeElement'] !== null ? $attributes['beforeElement'] : '';
 $beforeStart = ! empty( $attributes['beforeElement'] ) ? '<span class="dynamic-year-before">' : '';
 $beforeEnd   = ! empty( $attributes['beforeElement'] ) ? '</span>' : '';
 
 // Get the optional text AFTER the year. Check if the privacy policy link should be displayed instead of the user defined text.
-$after = ! empty( $attributes['afterElement'] ) ? esc_html( $attributes['afterElement'] ) : '';
+$after = ! empty( $attributes['afterElement'] ) ? $attributes['afterElement'] : '';
 
 // Define the text and the link of the privacy policy page.
 $privacyPolicyText  = ! empty( $attributes['privacyPolicy'] ) ? esc_html( $attributes['privacyPolicy'] ) : '';

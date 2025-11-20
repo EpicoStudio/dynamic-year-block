@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "epico/dynamic-year-block",
-	"version": "0.6.7",
+	"version": "1.0.0",
 	"title": "Dynamic Year",
 	"category": "text",
 	"icon": "calendar",
@@ -42,7 +42,7 @@
 	"supports": {
 		"anchor": false,
 		"html": false,
-		"__experimentalBorder": {
+		"border": {
 			"color": true,
 			"radius": true,
 			"style": true,
@@ -51,7 +51,7 @@
 		"spacing": {
 			"padding": true,
 			"margin": true,
-			"__experimentalDefaultControls": {
+			"defaultControls": {
 				"margin": false,
 				"padding": false
 			}
@@ -67,7 +67,7 @@
 			"gradients": true,
 			"link": true,
 			"enableContrastChecker": true,
-			"__experimentalDefaultControls": {
+			"defaultControls": {
 				"background": true,
 				"text": true,
 				"link": true
@@ -76,17 +76,18 @@
 		"typography": {
 			"fontSize": true,
 			"lineHeight": true,
-			"__experimentalFontFamily": true,
-			"__experimentalFontWeight": true,
-			"__experimentalFontStyle": true,
-			"__experimentalTextTransform": true,
-			"__experimentalTextDecoration": true,
-			"__experimentalLetterSpacing": true,
-			"__experimentalDefaultControls": {
+			"fontFamily": true,
+			"fontWeight": true,
+			"fontStyle": true,
+			"textTransform": true,
+			"textDecoration": true,
+			"letterSpacing": true,
+			"fitText": true,
+			"defaultControls": {
 				"fontSize": true,
-				"__experimentalFontFamily": true,
-				"__experimentalFontStyle": true,
-				"__experimentalFontWeight": true
+				"fontFamily": true,
+				"fontStyle": true,
+				"fontWeight": true
 			}
 		},
 		"interactivity": {

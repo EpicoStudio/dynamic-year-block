@@ -1,6 +1,6 @@
 {
 	"name": "dynamic-year-block",
-	"version": "0.6.7",
+	"version": "1.0.0",
 	"description": "Display a copyright notice in your footer with the current year.",
 	"author": "Marcio Duarte",
 	"license": "GPL-2.0-or-later",

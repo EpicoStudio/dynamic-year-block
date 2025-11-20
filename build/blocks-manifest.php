@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'epico/dynamic-year-block',
-		'version' => '0.6.7',
+		'version' => '1.0.0',
 		'title' => 'Dynamic Year',
 		'category' => 'text',
 		'icon' => 'calendar',
@@ -52,7 +52,7 @@ return array(
 		'supports' => array(
 			'anchor' => false,
 			'html' => false,
-			'__experimentalBorder' => array(
+			'border' => array(
 				'color' => true,
 				'radius' => true,
 				'style' => true,
@@ -61,7 +61,7 @@ return array(
 			'spacing' => array(
 				'padding' => true,
 				'margin' => true,
-				'__experimentalDefaultControls' => array(
+				'defaultControls' => array(
 					'margin' => false,
 					'padding' => false
 				)
@@ -77,7 +77,7 @@ return array(
 				'gradients' => true,
 				'link' => true,
 				'enableContrastChecker' => true,
-				'__experimentalDefaultControls' => array(
+				'defaultControls' => array(
 					'background' => true,
 					'text' => true,
 					'link' => true
@@ -86,17 +86,18 @@ return array(
 			'typography' => array(
 				'fontSize' => true,
 				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalFontWeight' => true,
-				'__experimentalFontStyle' => true,
-				'__experimentalTextTransform' => true,
-				'__experimentalTextDecoration' => true,
-				'__experimentalLetterSpacing' => true,
-				'__experimentalDefaultControls' => array(
+				'fontFamily' => true,
+				'fontWeight' => true,
+				'fontStyle' => true,
+				'textTransform' => true,
+				'textDecoration' => true,
+				'letterSpacing' => true,
+				'fitText' => true,
+				'defaultControls' => array(
 					'fontSize' => true,
-					'__experimentalFontFamily' => true,
-					'__experimentalFontStyle' => true,
-					'__experimentalFontWeight' => true
+					'fontFamily' => true,
+					'fontStyle' => true,
+					'fontWeight' => true
 				)
 			),
 			'interactivity' => array(
