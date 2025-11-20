@@ -96,7 +96,6 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 * 🎉 Milestone: First stable release, after extensive testing and refinement.
 * Updated the code for WordPress version 6.9.
 * Bug fix: preventing the HTML tags from being escaped in the text fields.
-* Updated the block.json file to use the stable version of the supports properties.
 
 = 0.6.7 =
 * Improved block registration.
