@@ -52,7 +52,7 @@ return array(
 		'supports' => array(
 			'anchor' => false,
 			'html' => false,
-			'border' => array(
+			'__experimentalBorder' => array(
 				'color' => true,
 				'radius' => true,
 				'style' => true,
@@ -61,7 +61,7 @@ return array(
 			'spacing' => array(
 				'padding' => true,
 				'margin' => true,
-				'defaultControls' => array(
+				'__experimentalDefaultControls' => array(
 					'margin' => false,
 					'padding' => false
 				)
@@ -77,7 +77,7 @@ return array(
 				'gradients' => true,
 				'link' => true,
 				'enableContrastChecker' => true,
-				'defaultControls' => array(
+				'__experimentalDefaultControls' => array(
 					'background' => true,
 					'text' => true,
 					'link' => true
@@ -86,17 +86,17 @@ return array(
 			'typography' => array(
 				'fontSize' => true,
 				'lineHeight' => true,
-				'fontFamily' => true,
-				'fontWeight' => true,
-				'fontStyle' => true,
-				'textTransform' => true,
-				'textDecoration' => true,
-				'letterSpacing' => true,
-				'defaultControls' => array(
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
 					'fontSize' => true,
-					'fontFamily' => true,
-					'fontStyle' => true,
-					'fontWeight' => true
+					'__experimentalFontFamily' => true,
+					'__experimentalFontStyle' => true,
+					'__experimentalFontWeight' => true
 				)
 			),
 			'interactivity' => array(

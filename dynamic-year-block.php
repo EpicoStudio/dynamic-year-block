@@ -32,9 +32,6 @@ add_action( 'init', 'epico_register_block_dynamic_year_block' );
 // Hooks the Dynamic Year block in the Group block, in the footer context.
 add_filter( 'hooked_block_types', 'epico_block_hooks', 10, 4 );
 
-// Registers the supported attributes for Block Bindings.
-add_filter( 'block_bindings_supported_attributes_epico/dynamic-year-block', 'epico_dynamic_year_block_bindings' );
-
 
 # ----------- HOOKED FUNCTIONS  -----------
 
@@ -101,14 +98,3 @@ function epico_block_hooks( $hooked_blocks, $position, $anchor_block, $context )
 	return $hooked_blocks;
 }
 
-/**
- * Registers the supported attributes for Block Bindings.
- *
- * @param array $attributes The supported attributes.
- * @return array The modified attributes.
- */
-function epico_dynamic_year_block_bindings( $attributes ) {
-	$attributes[] = 'beforeElement';
-	$attributes[] = 'afterElement';
-	return $attributes;
-}
