@@ -55,4 +55,7 @@ $markup .= $afterStart . $after . $afterEnd;
 $markup .= '</p>';
 $markup .= '</div>';
 
-echo $markup;
+// Use wp_kses_post() when echoing the full markup so Plugin Check
+// recognizes the output as escaped while preserving allowed HTML
+// (we already sanitized user-provided parts with wp_kses_post()).
+echo wp_kses_post( $markup );

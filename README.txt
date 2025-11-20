@@ -4,7 +4,7 @@ Tags:              year, date, dynamic, copyright, footer
 Tested up to:      6.9
 Requires at least: 6.4
 Requires PHP:      7.4
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 License:           GPL 2.0 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Donate link:       https://ubr.link/donate-wp
@@ -91,6 +91,9 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Security fix: ensure all block output is properly escaped using wp_kses_post().
 
 = 1.0.0 =
 * 🎉 Milestone: First stable release, after extensive testing and refinement.
