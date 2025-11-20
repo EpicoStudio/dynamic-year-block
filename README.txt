@@ -2,7 +2,7 @@
 Contributors:      pagelab, epicostudio
 Tags:              year, date, dynamic, copyright, footer
 Tested up to:      6.9
-Requires at least: 6.6
+Requires at least: 6.4
 Requires PHP:      7.4
 Stable tag:        1.0.0
 License:           GPL 2.0 or later
