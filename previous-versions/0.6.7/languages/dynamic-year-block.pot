@@ -1,0 +1,44 @@
+# Copyright (C) 2025 Márcio Duarte
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Dynamic Year Block 0.6.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dynamic-year-block\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-02T00:56:10+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: dynamic-year-block\n"
+
+#. Plugin Name of the plugin
+#: dynamic-year-block.php
+msgid "Dynamic Year Block"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dynamic-year-block.php
+msgid "https://github.com/EpicoStudio/dynamic-year-block"
+msgstr ""
+
+#. Description of the plugin
+#: dynamic-year-block.php
+msgid "A block that always displays the current year in your copyright footer notice."
+msgstr ""
+
+#. Author of the plugin
+#: dynamic-year-block.php
+msgid "Márcio Duarte"
+msgstr ""
+
+#. Author URI of the plugin
+#: dynamic-year-block.php
+msgid "https://epico.studio"
+msgstr ""
+
+#: dynamic-year-block.php:144
+msgid "Privacy Policy"
+msgstr ""

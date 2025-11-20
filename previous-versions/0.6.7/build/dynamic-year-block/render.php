@@ -14,12 +14,12 @@ $format       = isset( $attributes['format'] ) ? sanitize_text_field( $attribute
 $dynamic_year = esc_html( $current_date->format( $format ) );
 
 // Get the optional text BEFORE the year.
-$before      = $attributes['beforeElement'] !== null ? wp_kses_post( $attributes['beforeElement'] ) : '';
+$before      = $attributes['beforeElement'] !== null ? esc_html( $attributes['beforeElement'] ) : '';
 $beforeStart = ! empty( $attributes['beforeElement'] ) ? '<span class="dynamic-year-before">' : '';
 $beforeEnd   = ! empty( $attributes['beforeElement'] ) ? '</span>' : '';
 
 // Get the optional text AFTER the year. Check if the privacy policy link should be displayed instead of the user defined text.
-$after = ! empty( $attributes['afterElement'] ) ? wp_kses_post( $attributes['afterElement'] ) : '';
+$after = ! empty( $attributes['afterElement'] ) ? esc_html( $attributes['afterElement'] ) : '';
 
 // Define the text and the link of the privacy policy page.
 $privacyPolicyText  = ! empty( $attributes['privacyPolicy'] ) ? esc_html( $attributes['privacyPolicy'] ) : '';
@@ -48,10 +48,10 @@ $siteName   = ( $attributes['displaySiteName'] !== false ) ? ' <a target="_self"
 // Markup.
 $markup  = '<div ' . $wrapper_attributes . '>';
 $markup .= '<p class="dynamic-year-' . esc_attr( $dynamic_year ) . esc_attr( $alignClass ) . '">';
-$markup .= $beforeStart . $before . $beforeEnd;
+$markup .= $beforeStart . wp_kses_post( force_balance_tags( $before ) ) . $beforeEnd;
 $markup .= esc_attr( $dynamic_year );
 $markup .= $siteName;
-$markup .= $afterStart . $after . $afterEnd;
+$markup .= $afterStart . wp_kses_post( force_balance_tags( $after ) ) . $afterEnd;
 $markup .= '</p>';
 $markup .= '</div>';
 
