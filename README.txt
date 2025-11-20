@@ -95,7 +95,6 @@ You can help with a [donation](https://ubr.link/donate-wp), by [visiting our web
 = 1.0.0 =
 * 🎉 Milestone: First stable release, after extensive testing and refinement.
 * Updated the code for WordPress version 6.9.
-* Added support for "Stretchy Text" (fitText) in WordPress 6.9.
 * Added support for Block Bindings API for custom text attributes.
 * Bug fix: preventing the HTML tags from being escaped in the text fields.
 * Updated the block.json file to use the stable version of the supports properties.

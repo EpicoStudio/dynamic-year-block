@@ -82,7 +82,6 @@
 			"textTransform": true,
 			"textDecoration": true,
 			"letterSpacing": true,
-			"fitText": true,
 			"defaultControls": {
 				"fontSize": true,
 				"fontFamily": true,

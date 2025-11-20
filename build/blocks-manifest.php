@@ -92,7 +92,6 @@ return array(
 				'textTransform' => true,
 				'textDecoration' => true,
 				'letterSpacing' => true,
-				'fitText' => true,
 				'defaultControls' => array(
 					'fontSize' => true,
 					'fontFamily' => true,
