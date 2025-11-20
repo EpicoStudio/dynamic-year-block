@@ -44,6 +44,37 @@ dynamic-year-block/
 
 ## Workflow de Atualização do Plugin
 
+### 0. Workflow de Desenvolvimento com Fork (OBRIGATÓRIO)
+
+**CRÍTICO**: Antes de fazer qualquer ajuste no código do plugin, **SEMPRE** criar um fork/branch para teste:
+
+```bash
+# Criar uma nova branch para a correção/feature
+git checkout -b fix/descricao-do-ajuste
+# ou
+git checkout -b feature/descricao-da-funcionalidade
+
+# Fazer as alterações necessárias no código
+# ...
+
+# Após as alterações, fazer commit na branch
+git add .
+git commit -m "Descrição detalhada das alterações"
+
+# Push da branch para o repositório remoto
+git push origin fix/descricao-do-ajuste
+```
+
+**Razão**: O usuário precisa testar manualmente todas as correções antes de integrá-las ao tronco (main). **NUNCA** fazer commits diretos na branch `main` sem aprovação prévia do usuário após testes.
+
+**Fluxo Completo**:
+1. Criar branch de desenvolvimento
+2. Implementar as alterações
+3. Fazer commit e push da branch
+4. Usuário testa manualmente a branch
+5. Após aprovação do usuário, fazer merge para main
+6. Deletar a branch de desenvolvimento
+
 ### 1. Preparação do Ambiente
 
 **Importante**: Sempre execute os comandos a partir do WordPress Studio, clicando no botão `iTerm` na aba "Visão Geral".
@@ -174,6 +205,12 @@ svn ci -m "Security and compatibility improvements"
 ```
 
 ## Regras Importantes para Edição
+
+### 0. Workflow de Branches (PRIORIDADE MÁXIMA)
+- **NUNCA** fazer commits diretos na branch `main` ao implementar correções ou features
+- **SEMPRE** criar uma branch de desenvolvimento (fix/* ou feature/*) antes de fazer alterações
+- **SEMPRE** aguardar aprovação do usuário após testes manuais antes de fazer merge para main
+- Apenas fazer merge para main após confirmação explícita do usuário
 
 ### 1. Compatibilidade Pregressa
 - **NUNCA** remover prefixos `__experimental` de `block.json` sem testar em versões anteriores do WordPress
