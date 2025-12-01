@@ -47,7 +47,7 @@ No, this plugin works exclusively in the Block Editor.
 ## The link to my privacy policy does not appear on the front end.
  The block works only with the native Privacy Policy page. You can create one under “Settings → Privacy”, clicking the “Create button” on the “Settings” tab. Also, make sure your Privacy Policy page is published.
 
-## Is the included copyright notice enough to safeguard my website regarding legal issues? =
+## Is the included copyright notice enough to safeguard my website regarding legal issues?
 Most probably not. While the plugin offers a basic copyright notice, it doesn't automatically solve all legal issues your website may have, nor does it constitute legal advice in any way. The site owner is solely responsible for ensuring that the website respects the law.
 
 ## Does the plugin use the client time (via Javascript) or the server time (via PHP) to update the year?
