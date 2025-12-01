@@ -1,4 +1,4 @@
-![banner-1544x500-2025](https://github.com/user-attachments/assets/74af7a7d-c431-4737-852b-50e35c802fc3)
+![banner-1544x500](https://github.com/user-attachments/assets/2869b666-cc0f-4a97-97f5-579aa8baeecc)
 
 # Dynamic Year Block
 
