@@ -5,7 +5,7 @@
  * Description:       Display a copyright notice in your footer with the current year.
  * Version:           1.0.1
  * Requires at least: 6.4
- * Tested up to:      6.9
+ * Tested up to:      7.1
  * Requires PHP:      7.4
  * Author:            Márcio Duarte
  * Author URI:        https://epico.studio
@@ -69,7 +69,8 @@ if ( ! function_exists( 'epico_register_block_dynamic_year_block' ) ) {
 		) ), 'before' );
 
 		// Load available translations ($path is not needed here, as this is hosted on WordPress.org).
-		wp_set_script_translations( 'epico-dynamic-year-block-editor-script-js', 'dynamic-year-block' );
+		// The generated HTML tag ID gains a `-js` suffix, but that suffix is not part of the registered script handle.
+		wp_set_script_translations( 'epico-dynamic-year-block-editor-script', 'dynamic-year-block' );
 	}
 }
 

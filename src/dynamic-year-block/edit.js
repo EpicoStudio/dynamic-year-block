@@ -1,3 +1,5 @@
+/* global dynamicYearBlockData */
+
 /**
  * Inspector Controls and react hook with all the necessary props.
  *
@@ -8,7 +10,7 @@ import {
 	useBlockProps,
 	RichText,
 	AlignmentToolbar,
-	BlockControls
+	BlockControls,
 } from '@wordpress/block-editor';
 
 import { PanelBody, RadioControl, ToggleControl } from '@wordpress/components';
@@ -18,17 +20,30 @@ import { __, sprintf } from '@wordpress/i18n';
 /**
  * Renders the `epico/dynamic-year-block` block on the editor.
  *
- * @param {Object} props                   React props.
- * @param {Object} props.setAttributes     Callback for updating block attributes.
- * @param {Object} props.attributes        Block attributes.
- * @param {string} props.attributes.format Format of the year.
+ * @param {Object}   props                            React props.
+ * @param {Function} props.setAttributes              Callback for updating block attributes.
+ * @param {Object}   props.attributes                 Block attributes.
+ * @param {string}   props.attributes.format          Format of the year.
+ * @param {string}   props.attributes.beforeElement   Text displayed before the year.
+ * @param {string}   props.attributes.afterElement    Text displayed after the year.
+ * @param {string}   props.attributes.alignment       Text alignment.
+ * @param {boolean}  props.attributes.displaySiteName Whether to display the linked site name.
+ * @param {string}   props.attributes.privacyPolicy   Privacy policy link text.
  *
  * @return {JSX.Element} React element.
  */
 export default function Edit( {
-	attributes: { format, beforeElement, afterElement, alignment, displaySiteName, privacyPolicy }, // The default value is saved on block.json.
+	attributes: {
+		format,
+		beforeElement,
+		afterElement,
+		alignment,
+		displaySiteName,
+		privacyPolicy,
+	}, // The default value is saved on block.json.
 	setAttributes,
 } ) {
+	// TODO: Import dateI18n from @wordpress/date so the build declares the dependency explicitly.
 	// Define the two-digit year for the help text.
 	const year = wp.date.dateI18n( 'y' );
 
@@ -78,8 +93,14 @@ export default function Edit( {
 						'Enable to prepend any custom text. Default: “© Copyright”. Toggling resets to the default.',
 						'dynamic-year-block'
 					) }
-					onChange={ (newBeforeElement) =>
-						setAttributes( { beforeElement: newBeforeElement ? ( beforeElement || __( '© Copyright', 'dynamic-year-block' ) + '\u00A0' ) : '' } )
+					onChange={ ( newBeforeElement ) =>
+						setAttributes( {
+							beforeElement: newBeforeElement
+								? beforeElement ||
+								  __( '© Copyright', 'dynamic-year-block' ) +
+										'\u00A0'
+								: '',
+						} )
 					}
 					__nextHasNoMarginBottom={ true }
 				/>
@@ -102,21 +123,38 @@ export default function Edit( {
 						'Enable to append custom text. Default: “All rights reserved”. Toggling resets to the default.',
 						'dynamic-year-block'
 					) }
-					onChange={ (newAfterElement) =>
-						setAttributes( { afterElement: newAfterElement ? ( afterElement || '\u00A0' + __( 'All rights reserved', 'dynamic-year-block' )) : '' } )
+					onChange={ ( newAfterElement ) =>
+						setAttributes( {
+							afterElement: newAfterElement
+								? afterElement ||
+								  '\u00A0' +
+										__(
+											'All rights reserved',
+											'dynamic-year-block'
+										)
+								: '',
+						} )
 					}
 					__nextHasNoMarginBottom={ true }
 				/>
 
 				<ToggleControl
-					label={ __( 'Privacy Policy Link After Date', 'dynamic-year-block' ) }
+					label={ __(
+						'Privacy Policy Link After Date',
+						'dynamic-year-block'
+					) }
 					checked={ privacyPolicy !== '' }
 					help={ __(
 						'Enable to append a link to your site’s privacy policy, which you can define under “Settings → Privacy”. Toggling resets to the default.',
 						'dynamic-year-block'
 					) }
 					onChange={ ( newPrivacyPolicy ) =>
-						setAttributes( { privacyPolicy: newPrivacyPolicy ? ( privacyPolicy || __( 'Privacy Policy', 'dynamic-year-block' )) : '' } )
+						setAttributes( {
+							privacyPolicy: newPrivacyPolicy
+								? privacyPolicy ||
+								  __( 'Privacy Policy', 'dynamic-year-block' )
+								: '',
+						} )
 					}
 					__nextHasNoMarginBottom={ true }
 				/>
@@ -145,7 +183,10 @@ export default function Edit( {
 						value={ alignment }
 						onChange={ ( newAlignment ) =>
 							setAttributes( {
-								alignment: newAlignment === undefined ? 'none' : newAlignment,
+								alignment:
+									newAlignment === undefined
+										? 'none'
+										: newAlignment,
 							} )
 						}
 					/>
@@ -157,8 +198,16 @@ export default function Edit( {
 					<RichText
 						tagName="span"
 						className="dynamic-year-before"
-						allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
-						placeholder={ beforeElement !== '' ? __( 'Enter text', 'dynamic-year-block' ) : '' }
+						allowedFormats={ [
+							'core/bold',
+							'core/italic',
+							'core/link',
+						] }
+						placeholder={
+							beforeElement !== ''
+								? __( 'Enter text', 'dynamic-year-block' )
+								: ''
+						}
 						value={ beforeElement }
 						onChange={ ( newBeforeElement ) =>
 							setAttributes( { beforeElement: newBeforeElement } )
@@ -167,43 +216,62 @@ export default function Edit( {
 					{ currentYear }
 					{ displaySiteName ? (
 						<>
-							{' '}
+							{ ' ' }
 							<a
-								onClick={(event) => {
+								onClick={ ( event ) => {
 									event.preventDefault(); // Prevent the default link behavior
-								}}
+								} }
 								target="_self"
 								rel="home"
-								href={dynamicYearBlockData.siteUrl}>{dynamicYearBlockData.siteTitle}
+								href={ dynamicYearBlockData.siteUrl }
+							>
+								{ dynamicYearBlockData.siteTitle }
 							</a>
 						</>
-					) : null}
+					) : null }
 
 					<RichText
 						tagName="span"
 						className="dynamic-year-after"
-						allowedFormats={ [ 'core/bold', 'core/italic', 'core/link' ] }
-						placeholder={ afterElement !== '' ? __( 'Enter text', 'dynamic-year-block' ) : '' }
+						allowedFormats={ [
+							'core/bold',
+							'core/italic',
+							'core/link',
+						] }
+						placeholder={
+							afterElement !== ''
+								? __( 'Enter text', 'dynamic-year-block' )
+								: ''
+						}
 						value={ afterElement }
 						onChange={ ( newAfterElement ) =>
 							setAttributes( { afterElement: newAfterElement } )
 						}
 					/>
 					<>
-						{' '}
+						{ ' ' }
 						<RichText
 							tagName="a"
 							className="dynamic-year-privacy-policy"
-							allowedFormats={['core/bold', 'core/italic']}
-							placeholder={ privacyPolicy !== '' ? __( 'Enter text', 'dynamic-year-block' ) : '' }
+							allowedFormats={ [ 'core/bold', 'core/italic' ] }
+							placeholder={
+								privacyPolicy !== ''
+									? __( 'Enter text', 'dynamic-year-block' )
+									: ''
+							}
 							value={ privacyPolicy }
 							onChange={ ( newPrivacyPolicy ) =>
-								setAttributes( { privacyPolicy: newPrivacyPolicy } )
+								setAttributes( {
+									privacyPolicy: newPrivacyPolicy,
+								} )
 							}
 							href="#"
 							target="_blank"
 							rel="noopener noreferrer"
-							aria-label={ __( 'Privacy Policy', 'dynamic-year-block' ) }
+							aria-label={ __(
+								'Privacy Policy',
+								'dynamic-year-block'
+							) }
 						/>
 					</>
 				</p>

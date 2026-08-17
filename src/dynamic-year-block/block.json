@@ -6,14 +6,7 @@
 	"title": "Dynamic Year",
 	"category": "text",
 	"icon": "calendar",
-	"keywords": [
-		"year",
-		"dynamic",
-		"date",
-		"block",
-		"footer",
-		"copyright"
-	],
+	"keywords": [ "year", "dynamic", "date", "block", "footer", "copyright" ],
 	"description": "Display a copyright notice in your footer with the current year.",
 	"textdomain": "dynamic-year-block",
 	"attributes": {
@@ -42,10 +35,7 @@
 			"default": ""
 		}
 	},
-	"usesContext": [
-		"backgroundColor",
-		"foregroundColor"
-	],
+	"usesContext": [ "backgroundColor", "foregroundColor" ],
 	"supports": {
 		"anchor": false,
 		"html": false,

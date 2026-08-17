@@ -8,7 +8,7 @@
 	"main": "build/index.js",
 	"scripts": {
 		"format": "wp-scripts format",
-		"lint:css": "wp-scripts lint-style",
+		"lint:css": "wp-scripts lint-style --allow-empty-input",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"make-pot": "wp i18n make-pot . languages/awp.pot --slug=awp --domain=awp --exclude=node_modules,src",

@@ -2,6 +2,9 @@
 /**
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
  */
+
+defined( 'ABSPATH' ) || exit;
+
 // Block wrapper classes and styles.
 $epico_wrapper_attributes = get_block_wrapper_attributes();
 

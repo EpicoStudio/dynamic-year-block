@@ -4,10 +4,10 @@
 
 * Donate link: https://ubr.link/donate-wp
 * Tags: year, dynamic, date, copyright, footer, block
-* Tested up to: 6.9
-* Requires at least: 6.6
+* Tested up to: 7.1
+* Requires at least: 6.4
 * Requires PHP: 7.4
-* Stable tag: 1.0.0
+* Stable tag: 1.0.1
 * License: GPL 2.0 or later
 
 Auto update the copyright year in your website footer dynamically. At the turn of each year, the number will automatically change to reflect the current year.
@@ -53,7 +53,27 @@ Most probably not. While the plugin offers a basic copyright notice, it doesn't 
 ## Does the plugin use the client time (via Javascript) or the server time (via PHP) to update the year?
 The plugin uses a WordPress core function ([`current_datetime`](https://developer.wordpress.org/reference/functions/current_datetime/)) to get your server time, using the timezone specified in the “Settings → General → Timezone” on your WordPress dashboard. So it is important to set your timezone in order to display the year correctly, especially at the turn of the year.
 
+## Can page caching cause the previous year to remain visible?
+The block is rendered dynamically whenever WordPress generates the page. However, a full-page cache or CDN may continue serving previously generated HTML until that cache expires or is purged. This behavior can occur with any caching solution, not only LiteSpeed Cache. Most caches expire or are invalidated normally, but if the previous year remains visible after January 1, purge the affected page or the full-page cache. The plugin intentionally does not bypass caching or require a vendor-specific ESI integration.
+
 ## How can I support the development of the Dynamic Year Block?
 You can help with a [donation](https://ubr.link/donate-wp), by [visiting our website](https://epico.studio) or publishing a [positive review](https://wordpress.org/support/plugin/dynamic-year-block/reviews/#new-post), if you find it useful.
 
+# WordPress 7.1 compatibility checklist
+
+## Required before declaring compatibility
+
+- [x] Run the JavaScript formatter and linter, then rebuild the production assets.
+- [x] Confirm that the generated block icon retains `fill="currentColor"` and that the generated `render.php` contains the direct-access guard.
+- [x] Test with a WordPress 7.1 Release Candidate in both the post editor and Site Editor, including insertion, editing, saving, reopening, and front-end rendering.
+- [x] Test both year formats, text before and after the year, site-name and privacy-policy links, alignment, typography, borders, spacing, colors, gradients, and background images.
+- [x] Test automatic insertion through Block Hooks and the existing per-template opt-out behavior.
+- [x] Test existing saved block instances to confirm backward compatibility.
+- [x] Run Plugin Check against the release package and verify that development files, previous ZIP files, hidden files, and `node_modules` are excluded.
+- [x] Finalize the release package and prepare the Git and WordPress.org SVN release directories.
+
+## Separate, optional follow-ups
+
+- [ ] Evaluate the WordPress 7.1 `background.gradient` support in a separate change. Preserve rendering and editing of blocks saved with the legacy color-gradient support; do not migrate automatically.
+- [ ] Replace global `wp.date.dateI18n()` usage with an explicit `@wordpress/date` import so the build declares the dependency directly.
 
